@@ -1,4 +1,4 @@
-@media (max-width: 480px) {
+/*@media (max-width: 480px) {
     .modal-content {
         width: 92%;
         padding: 1rem;
@@ -798,5 +798,57 @@
         width: 100%;
         padding: 0.6rem;
         font-size: 0.95rem;
+    }
+}
+
+/* ==========================================================================
+   FIX DEFINTIVO: BUG DE CLIC FANTASMA EN WHATSAPP Y MODALES
+   ========================================================================== */
+
+/* 1. Desactivar interacciones en el modal de WhatsApp cuando está cerrado */
+.wa-modal {
+    pointer-events: none !important; /* Ignora toques cuando está invisible */
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+}
+
+/* 2. Activar interacciones ÚNICAMENTE cuando el modal tiene la clase 'active' o 'show' */
+.wa-modal.active,
+.wa-modal.show,
+.wa-modal.open {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* 3. Delimitar estrictamente el botón flotante de WhatsApp */
+.wa-button,
+.btn-whatsapp-icon {
+    width: 52px !important;
+    height: 52px !important;
+    max-width: 52px !important;
+    max-height: 52px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: fixed !important;
+    z-index: 999 !important;
+    pointer-events: auto !important;
+    overflow: hidden !important; /* Corta cualquier área sobrante */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* 4. Asegurar que la flecha 'Back to top' no se pise con el botón de WhatsApp */
+@media (max-width: 768px) {
+    .wa-button { 
+        bottom: 85px !important; 
+        right: 18px !important; 
+    }
+    .back-to-top { 
+        bottom: 20px !important; 
+        right: 18px !important; 
     }
 }

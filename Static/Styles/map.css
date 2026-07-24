@@ -191,3 +191,121 @@
         flex: 1; 
     }
 }
+
+/* =========================================
+   RESPONSIVE PROFESIONAL (MAPA ELITE Y CRISTAL)
+========================================= */
+
+/* Pantallas medianas y Tablets (hasta 992px) */
+@media (max-width: 992px) {
+    .elite-map-container {
+        height: 650px;
+    }
+
+    /* Reducimos los márgenes de los elementos flotantes para no desperdiciar espacio */
+    .floating-glass-panel {
+        top: 25px;
+        left: 25px;
+        width: 340px; /* Un poco más angosto */
+        padding: 2rem;
+    }
+
+    .floating-controls {
+        bottom: 25px;
+        right: 25px;
+    }
+
+    .glass-val {
+        font-size: 1.8rem;
+    }
+}
+
+/* Pantallas de móviles estándar (hasta 768px) */
+@media (max-width: 768px) {
+    .presence-section-elite {
+        padding: 4rem 1rem 4rem;
+    }
+    
+    .elite-map-container {
+        height: 700px; /* Le damos altura extra porque el panel tomará espacio vertical */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* TRUCO UX: El panel deja de flotar en una esquina y se convierte en la cabecera del mapa */
+    .floating-glass-panel {
+        position: relative;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        border-radius: 24px 24px 0 0; /* Solo curvas arriba */
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra hacia abajo para separarlo del mapa */
+        box-sizing: border-box;
+    }
+
+    .glass-title {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Centramos los controles en la parte inferior para fácil acceso con los pulgares */
+    .floating-controls {
+        bottom: 20px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    .glass-btn { 
+        flex: 1; 
+        text-align: center;
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Teléfonos pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .elite-map-container {
+        height: 650px; 
+    }
+
+    .floating-glass-panel {
+        padding: 1.5rem; /* Ajustamos el aire interior */
+    }
+
+    /* Compactamos la cuadrícula de estadísticas */
+    .glass-stats-grid {
+        gap: 1.2rem 1rem;
+    }
+
+    .glass-stat i {
+        font-size: 1.2rem;
+    }
+
+    .glass-val {
+        font-size: 1.6rem; /* Números legibles pero sin desbordar */
+    }
+
+    .glass-label {
+        font-size: 0.75rem;
+    }
+
+    /* Controles más ajustados */
+    .floating-controls {
+        width: 92%;
+        bottom: 15px;
+        padding: 8px;
+        gap: 8px;
+        border-radius: 12px;
+    }
+
+    .glass-btn {
+        padding: 0.7rem 0.5rem;
+        font-size: 0.85rem;
+    }
+}

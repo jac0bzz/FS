@@ -87,3 +87,75 @@
         height: 35px;
     }
 }
+
+/* =========================================
+   ANIMACIÓN DEL CARRUSEL (Añadir antes del responsive)
+========================================= */
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Se desplaza hacia la izquierda. 
+           Nota: Para que el scroll sea infinito y perfecto sin saltos, 
+           recuerda duplicar tus logos en el HTML dentro del .partners-track */
+        transform: translateX(-50%);
+    }
+}
+
+/* =========================================
+   RESPONSIVE PROFESIONAL (COLABORADORES)
+========================================= */
+
+/* Pantallas medianas y Tablets (hasta 900px) */
+@media (max-width: 900px) {
+    .partners {
+        padding: 2rem 0; /* Damos un poco más de aire al apilar los elementos */
+    }
+
+    .partners .container {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .partners .section-header {
+        flex: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .partners-track {
+        gap: 3rem; /* Reducimos la separación entre logos para pantallas medianas */
+    }
+
+    .partners-track img {
+        height: 35px;
+    }
+}
+
+/* Teléfonos pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .partners {
+        padding: 1.5rem 0;
+    }
+
+    .partners .section-title {
+        font-size: 1.1rem; /* Título un poco más compacto */
+    }
+
+    .partners-track {
+        gap: 2rem; /* Menos espacio para que se vean varios logos a la vez en la pantalla estrecha */
+        /* Ajustamos ligeramente la velocidad para pantallas chicas si es necesario */
+        animation: scrollLogos 25s linear infinite; 
+    }
+
+    .partners-track img {
+        height: 28px; /* Logos más proporcionales a un celular */
+    }
+
+    .partners-carousel {
+        -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    }
+}

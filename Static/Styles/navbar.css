@@ -210,3 +210,124 @@
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
 }
+
+/* =========================================
+   RESPONSIVE HEADER (TABLETS Y MÓVILES)
+========================================= */
+
+/* Pantallas medianas y Tablets (hasta 992px) */
+@media (max-width: 992px) {
+    /* 1. Mostrar el botón hamburguesa */
+    .hamburger {
+        display: flex;
+    }
+
+    /* 2. Ocultar el botón de login de escritorio */
+    .btn-login-desktop {
+        display: none;
+    }
+
+    /* 3. Convertir el <nav> en un panel lateral oculto */
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Oculto a la derecha */
+        width: 75vw;
+        max-width: 350px;
+        height: 100vh;
+        /* Usa el color de fondo o blanco por defecto */
+        background-color: var(--color-background, #ffffff); 
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* 4. Clase que activa tu JavaScript para mostrar el menú */
+    .nav.active {
+        right: 0;
+    }
+
+    /* 5. Acomodar la lista de enlaces en vertical */
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        font-size: 1.2rem; /* Letra un poco más grande para poder tocarla con el dedo */
+    }
+
+    /* 6. Mostrar el botón de login del menú móvil */
+    .nav-login-mobile {
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .nav-login-mobile .btn-login {
+        display: block;
+        width: 100%;
+        padding: 0.8rem;
+    }
+}
+
+/* Pantallas de móviles estándar (hasta 768px) */
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0.6rem 1rem;
+    }
+
+    .logo-img, 
+    .logo-img-dark {
+        width: 160px; /* Logo más pequeño */
+    }
+    
+    .header-actions {
+        gap: 8px; /* Menos espacio entre botones */
+    }
+
+    .translate-btn {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Teléfonos pequeños (hasta 480px - Como el de la imagen) */
+@media (max-width: 480px) {
+    .header-content {
+        padding: 0.5rem 0.8rem; /* Reducimos márgenes laterales para ganar espacio */
+    }
+
+    .logo-img, 
+    .logo-img-dark {
+        width: 130px; /* Reducción agresiva del logo para evitar choques */
+    }
+
+    .header-actions {
+        gap: 4px; /* Espacio mínimo entre iconos */
+    }
+
+    /* Ocultamos la palabra "ES" y dejamos solo el icono del mundo */
+    .translate-btn span {
+        display: none; 
+    }
+
+    .translate-btn {
+        padding: 0.4rem 0.5rem; /* Botón más compacto */
+    }
+
+    .theme-toggle {
+        padding: 0.3rem; /* Luna/Sol más compactos */
+    }
+
+    .hamburger {
+        padding: 0.3rem; /* Hamburguesa más compacta */
+    }
+}

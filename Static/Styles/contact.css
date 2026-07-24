@@ -249,3 +249,106 @@
     height: 20px;
     margin-left: -2px; 
 }  
+
+/* =========================================
+   RESPONSIVE PROFESIONAL (CONTACTO Y WHATSAPP)
+========================================= */
+
+/* Pantallas medianas y Tablets (hasta 992px) */
+@media (max-width: 992px) {
+    /* Pasamos el diseño a 1 sola columna */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem; /* Espacio generoso entre la info y el teléfono */
+    }
+
+    /* Centramos el teléfono en la pantalla */
+    .whatsapp-mockup-wrapper {
+        max-width: 450px;
+        min-height: 450px; /* Le damos una altura mínima para que parezca un celular real */
+    }
+}
+
+/* Teléfonos estándar (hasta 768px) */
+@media (max-width: 768px) {
+    .contact-description {
+        font-size: 1rem;
+    }
+
+    /* Ajustamos el tamaño de los iconos de contacto para que no roben tanto espacio */
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .contact-item h4 {
+        font-size: 0.95rem;
+    }
+
+    .contact-item p {
+        font-size: 0.9rem;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Teléfonos pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .contact-grid {
+        gap: 2.5rem;
+    }
+
+    /* =========================================
+       AJUSTES FINOS DEL MOCKUP DE WHATSAPP
+    ========================================= */
+    .whatsapp-phone {
+        border-radius: 18px; /* Radio ligeramente menor en móviles pequeños */
+    }
+
+    /* Reducimos el padding de la cabecera para ganar espacio vertical */
+    .wa-header {
+        padding: 0.8rem 1rem;
+    }
+
+    .wa-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .wa-info h4 {
+        font-size: 0.95rem;
+    }
+
+    .wa-info p {
+        font-size: 0.8rem;
+    }
+
+    /* Ajustamos los márgenes del chat para que el mensaje no toque los bordes */
+    .wa-chat-body {
+        padding: 1rem;
+    }
+
+    .wa-message {
+        font-size: 0.9rem;
+        max-width: 90%; /* Dejamos que el globo ocupe un poco más de ancho en pantallas diminutas */
+    }
+
+    /* Área de escritura más compacta */
+    .wa-input-area {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+
+    .wa-input-area input {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .wa-send-btn {
+        width: 40px;
+        height: 40px;
+    }
+}

@@ -228,3 +228,84 @@
     border-radius: 50%;
     animation: scroll 2s infinite;
 }
+
+/* =========================================
+   RESPONSIVE HERO (TABLETS Y MÓVILES) - CORREGIDO
+========================================= */
+
+/* Tablets y móviles grandes (hasta 768px) */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 80px; /* Evita que el menú fijo tape el contenido */
+    }
+
+    .hero-logo {
+        width: 220px;
+        margin-bottom: 1rem;
+    }
+
+    /* CORRECCIÓN CRÍTICA: Reducimos el tamaño de la fuente para evitar el desbordamiento horizontal */
+    .hero-title {
+        font-size: 2.5rem; 
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle2 {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.8rem;
+        padding: 0 1rem;
+    }
+
+    .btn.pro {
+        padding: 0.8rem 1.8rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Teléfonos pequeños (hasta 480px - iPhone, Android estándar) */
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 70px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero-logo {
+        width: 180px; 
+    }
+
+    /* CORRECCIÓN CRÍTICA: Aún más pequeño para que "FULL SERVICES" quepa en una sola línea en pantallas de 390px */
+    .hero-title {
+        font-size: 2rem; 
+    }
+
+    .hero-subtitle2 {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+        padding: 0;
+    }
+
+    /* Los botones en columna para que no se salgan de la pantalla */
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .btn.pro {
+        width: 100%;
+        text-align: center;
+        /* Aseguramos que el padding no haga que el botón supere el 100% del ancho */
+        box-sizing: border-box; 
+    }
+}

@@ -230,3 +230,100 @@
         font-size: 1.8rem;
     }
 }
+
+/* =========================================
+   RESPONSIVE SOBRE NOSOTROS Y HEADERS
+========================================= */
+
+/* Pantallas medianas y Tablets (hasta 992px) */
+@media (max-width: 992px) {
+    /* Pasamos el grid a 1 sola columna para que el texto y la imagen no se aplasten */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem; /* Damos buen espacio entre el texto y el carrusel */
+    }
+
+    /* Centramos un poco el contenido para que fluya mejor en vertical */
+    .about-text-container {
+        text-align: center;
+    }
+
+    .about-features {
+        align-items: center; /* Centra la lista de características */
+    }
+
+    /* Ajustamos el botón para quitar el margen izquierdo que lo desalineaba */
+    .cta-button {
+        margin-left: 0;
+        margin-top: 1.5rem;
+    }
+}
+
+/* Pantallas de móviles estándar (hasta 768px) */
+@media (max-width: 768px) {
+    /* --- Ajustes del Header Dividido --- */
+    .split-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        text-align: left;
+    }
+    
+    .split-right {
+        border-left: none;
+        padding-left: 0;
+        border-top: 3px solid var(--color-primary);
+        padding-top: 1.5rem;
+        width: 100%; /* Asegura que la línea superior ocupe todo el ancho */
+    }
+    
+    .split-left .section-title {
+        font-size: 2rem; /* Tamaño intermedio perfecto */
+    }
+
+    /* --- Ajustes de Textos y Controles --- */
+    .section-description,
+    .about-text {
+        font-size: 1rem; /* Mejor lectura en pantallas pequeñas */
+        line-height: 1.6;
+    }
+
+    /* Controles del carrusel un poco más compactos pero tocables */
+    .about-controls #prevSlide,
+    .about-controls #nextSlide {
+        padding: 0.6rem 1rem;
+        font-size: 1.1rem;
+    }
+
+    .dots-container {
+        margin: 0 10px;
+    }
+}
+
+/* Teléfonos pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .section-header {
+        margin-bottom: 2rem; /* Menos espacio muerto */
+    }
+
+    .split-left .section-title {
+        font-size: 1.7rem; /* Evitamos que el título rompa la pantalla */
+    }
+
+    .about-grid {
+        gap: 2rem;
+    }
+
+    .feature-item {
+        font-size: 0.95rem;
+        text-align: left; /* Aunque esté centrado el bloque, el texto se lee mejor a la izquierda */
+    }
+
+    /* El botón CTA ocupa todo el ancho en móviles pequeños (se ve muy profesional y estilo App) */
+    .cta-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}

@@ -256,3 +256,139 @@ body {
     .dir-title { font-size: 1.8rem; }
     .dir-subtitle { font-size: 0.75rem; }
 }
+
+/* ==========================================================================
+   RESPONSIVE DEL DIRECTORIO (MÓVILES, TABLETS Y PANTALLAS PEQUEÑAS)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TABLETS Y PANTALLAS MEDIANAS (hasta 992px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+    .directory-container {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   2. TELÉFONOS MÓVILES ESTÁNDAR (hasta 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .directory-container {
+        padding: 2rem 1rem;
+    }
+
+    /* Reducción fluida del Header */
+    .dir-header {
+        margin-bottom: 2rem;
+    }
+
+    .dir-logo img {
+        height: 120px; /* Tamaño adaptado para móvil */
+        margin-bottom: 0.8rem;
+    }
+
+    .dir-title {
+        font-size: 1.6rem;
+        letter-spacing: 1.5px;
+    }
+
+    .dir-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Buscador adaptativo */
+    .search-wrapper {
+        max-width: 100%;
+    }
+
+    #searchInput {
+        padding: 12px 18px 12px 45px;
+        font-size: 0.9rem;
+    }
+
+    .search-wrapper .search-icon {
+        left: 16px;
+        font-size: 1rem;
+    }
+
+    /* Ajuste de tarjetas en móvil */
+    .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.2rem;
+    }
+
+    .person-card {
+        padding: 2rem 1.2rem;
+        border-radius: 16px;
+    }
+
+    .card-avatar {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 1.2rem;
+    }
+
+    .card-avatar i {
+        font-size: 2.2rem;
+    }
+
+    .card-name {
+        font-size: 1.1rem;
+    }
+
+    .card-role {
+        font-size: 0.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-bio {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   3. TELÉFONOS PEQUEÑOS (hasta 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+    .directory-container {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .dir-logo img {
+        height: 95px;
+    }
+
+    .dir-title {
+        font-size: 1.35rem;
+        letter-spacing: 1px;
+    }
+
+    .dir-subtitle {
+        font-size: 0.7rem;
+        letter-spacing: 1.5px;
+    }
+
+    /* En celulares muy angostos, se muestra una tarjeta por fila ocupando todo el ancho */
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .person-card {
+        padding: 1.8rem 1rem;
+    }
+
+    /* Mejor tap target para dedos en pantalla táctil */
+    .btn-bio {
+        min-height: 44px;
+    }
+}

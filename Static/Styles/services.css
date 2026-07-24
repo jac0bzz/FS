@@ -147,12 +147,6 @@
     transition: transform 0.15s ease; 
 }
 
-@media (max-width: 768px) {
-    .services-accordion { flex-direction: column; height: 800px; }
-    .accordion-item { flex: 1; }
-    .accordion-item:hover { flex: 3; }
-}
-
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -289,12 +283,6 @@
 .bento-card:hover .bento-action { opacity: 1; transform: translateY(0); color: #fff; }
 .bento-action i { transition: transform 0.3s ease; }
 .bento-card:hover .bento-action i { transform: translateX(5px); }
-
-@media (max-width: 900px) {
-    .bento-grid { grid-template-columns: 1fr; grid-auto-rows: 250px; }
-    .bento-feature, .bento-wide { grid-column: span 1; }
-    .bento-feature { grid-row: span 2; }
-}
 
 .btn-modal { 
     margin-top: calc(var(--spacing-md) - 19px);
@@ -513,4 +501,211 @@
 .modal-close:hover {
     color: var(--color-primary);
     transform: scale(1.15);
+}
+/* ==========================================================================
+   RESPONSIVE COMPLETO - FIX DE ALINEACIÓN DE ÍCONOS Y TEXTOS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TABLETS Y PANTALLAS MEDIANAS (hasta 992px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+    .services-accordion {
+        height: 550px;
+        gap: 10px;
+    }
+    .accordion-item:hover,
+    .accordion-item:focus-within {
+        flex: 5;
+    }
+    .accordion-item .service-title {
+        font-size: 1.2rem;
+    }
+
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 260px;
+    }
+    .bento-wide { grid-column: span 2; }
+    .bento-feature { grid-column: span 2; grid-row: span 1; }
+    .bento-feature .bento-title { font-size: 2.2rem; }
+}
+
+/* --------------------------------------------------------------------------
+   2. TELÉFONOS MÓVILES ESTÁNDAR (hasta 768px) - ALINEACIÓN PERFECTA
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    /* Acordeón en Vertical */
+    .services-accordion {
+        flex-direction: column !important;
+        height: auto !important; 
+        min-height: auto !important;
+        gap: 12px !important;
+    }
+
+    /* Tarjeta Compacta */
+    .services-accordion .accordion-item {
+        flex: none !important;
+        width: 100% !important;
+        min-height: 90px !important;
+        height: auto !important;
+        transition: min-height 0.4s ease !important;
+    }
+
+    /* Estructura Interna: Alineación Horizontal Perfecta para Ícono + Título */
+    .services-accordion .accordion-content {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        padding: 16px 20px !important;
+        height: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Cabecera (Ícono + Título alineados al centro verticalmente) */
+    .services-accordion .service-header,
+    .services-accordion .accordion-item > .accordion-content > header,
+    .services-accordion .accordion-item .service-info-header {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
+
+    /* Fijar tamaño exacto del Ícono para evitar desfases */
+    .services-accordion .service-icon {
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        min-height: 48px !important;
+        margin: 0 !important; /* Elimina márgenes extraños */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important; /* Evita que el ícono se encoja */
+    }
+
+    .services-accordion .service-icon i,
+    .services-accordion .service-icon svg {
+        font-size: 20px !important;
+        margin: 0 !important;
+    }
+
+    /* Título alineado junto al ícono */
+    .services-accordion .service-title {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        color: #ffffff !important;
+        font-size: 1.1rem !important;
+        font-weight: 700 !important;
+        margin: 0 !important;
+        line-height: 1.3 !important;
+        white-space: normal !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+        text-align: left !important;
+    }
+
+    /* Cuerpo expandible al tocar */
+    .services-accordion .accordion-body {
+        width: 100% !important;
+    }
+
+    .services-accordion .service-description {
+        font-size: 0.875rem !important;
+        line-height: 1.45 !important;
+        margin: 12px 0 !important;
+        text-align: left !important;
+    }
+
+    /* Despliegue de la tarjeta al interactuar */
+    .services-accordion .accordion-item:active,
+    .services-accordion .accordion-item:focus-within,
+    .services-accordion .accordion-item:hover {
+        min-height: 260px !important;
+    }
+
+    .services-accordion .accordion-item:active .accordion-body,
+    .services-accordion .accordion-item:focus-within .accordion-body,
+    .services-accordion .accordion-item:hover .accordion-body {
+        opacity: 1 !important;
+        visibility: visible !important;
+        max-height: 200px !important;
+        transform: translateY(0) !important;
+    }
+
+    .btn-modal {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 0.75rem 1rem !important;
+    }
+
+    /* Bento Grid */
+    .bento-grid {
+        grid-template-columns: 1fr !important;
+        grid-auto-rows: 240px !important;
+    }
+    .bento-feature, 
+    .bento-wide { 
+        grid-column: span 1 !important; 
+        grid-row: span 1 !important; 
+    }
+
+    /* Modal */
+    .modal { padding: 1rem !important; }
+    .modal-content {
+        margin-top: 40px !important;
+        padding: 2.5rem 1rem 1rem !important;
+        width: 100% !important;
+        max-height: 80vh !important;
+    }
+    .modal-icon {
+        width: 75px !important;
+        height: 75px !important;
+        top: -40px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .modal-icon i { font-size: 2rem !important; }
+    #modalBody h2 { font-size: 1.5rem !important; letter-spacing: 1.5px !important; }
+    #modalBody p { font-size: 0.95rem !important; }
+
+    .modal-gallery.collage, 
+    .special-collage {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
+        gap: 10px !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   3. TELÉFONOS PEQUEÑOS (hasta 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+    .services, 
+    .rigs-bento-section { padding: 2.5rem 0.8rem 3.5rem !important; }
+
+    .services-accordion .accordion-item:active,
+    .services-accordion .accordion-item:focus-within,
+    .services-accordion .accordion-item:hover {
+        min-height: 290px !important;
+    }
+
+    .services-accordion .service-icon {
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
+        min-height: 42px !important;
+    }
+
+    .bento-content { padding: 1.2rem !important; }
+    .bento-title { font-size: 1.3rem !important; }
+    .bento-feature .bento-title { font-size: 1.6rem !important; }
+
+    .modal-close { top: 0.5rem !important; right: 0.8rem !important; font-size: 1.5rem !important; }
+    .modal-gallery.collage, 
+    .special-collage { grid-template-columns: 1fr !important; }
+    .modal-gallery.collage img, 
+    .collage-item img { height: 180px !important; }
 }

@@ -245,3 +245,122 @@ body.dark-mode .mini {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================
+   6. RESPONSIVE PROFESIONAL (PRODUCTO)
+========================================= */
+
+/* Pantallas medianas y Tablets (hasta 992px) */
+@media (max-width: 992px) {
+    .producto {
+        margin: 5rem auto 3rem; /* Reducimos el margen superior gigante */
+        padding: 2.5rem;
+    }
+
+    .contenedor-producto {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    /* TRUCO UX: Pasamos la galería de imágenes ARRIBA de la tabla en pantallas pequeñas */
+    .columna-media {
+        order: -1; 
+    }
+}
+
+/* Pantallas de móviles estándar (hasta 768px) */
+@media (max-width: 768px) {
+    .producto {
+        margin: 4rem auto 2rem;
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .ventajas {
+        padding: 1.5rem; /* Reducimos el padding interno para ganar espacio */
+    }
+
+    .lista-dos-columnas {
+        grid-template-columns: 1fr; /* Lista de características a 1 columna */
+        gap: 1rem;
+    }
+
+    /* Ajuste de la tabla para tablets pequeñas */
+    .producto th, 
+    .producto td {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Teléfonos pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .producto {
+        margin: 3rem 1rem 2rem; /* Margen lateral de 1rem por si no hay contenedor padre */
+        padding: 1.2rem;
+    }
+
+    .contenedor-producto {
+        gap: 1.5rem;
+    }
+
+    /* =========================================
+       TRANSFORMACIÓN DE TABLA A TARJETAS
+       Evita el scroll horizontal en móviles
+    ========================================= */
+    .producto table, 
+    .producto tbody, 
+    .producto tr, 
+    .producto th, 
+    .producto td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .producto table {
+        border: none;
+        background: transparent;
+    }
+
+    .producto tr {
+        margin-bottom: 1rem;
+        border: 1px solid var(--prod-border);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .producto tr:last-child {
+        margin-bottom: 0;
+    }
+
+    .producto th {
+        border-bottom: none;
+        padding: 0.6rem 1rem;
+        background: var(--prod-surface);
+    }
+
+    .producto td {
+        border-bottom: none;
+        padding: 0.2rem 1rem 1rem; /* Menos padding arriba para que se pegue al título */
+    }
+
+    /* ========================================= */
+
+    .ventajas h2 {
+        font-size: 1.2rem;
+    }
+
+    .ventajas p {
+        font-size: 0.95rem;
+    }
+
+    /* Botón a pantalla completa tipo App */
+    .btn-whatsapp {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 1rem;
+    }
+}
