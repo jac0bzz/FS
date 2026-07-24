@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="../static/styles/responsive.css">
     <link rel="stylesheet" href="../static/styles/darkmode.css">
     <link rel="stylesheet" href="../static/styles/animations.css">
+    <link rel="stylesheet" href="../Static/Styles/navbar.css">
+    <link rel="stylesheet" href="../Static/Styles/footer.css">
+    <link rel="stylesheet" href="../Static/Styles/styles.css">
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +30,26 @@
 </head>
 
 <body>
+    <div id="site-preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="logo-loader-wrapper">
+                <div class="tech-ring"></div>
+                <div class="tech-ring-inner"></div>
+                
+                <div class="loader-logo-box">
+                    <img src="../Static/Images/Logo blanco.png" alt="Full Services" class="loader-logo">
+                </div>
+            </div>
+
+            <div class="loader-text-group">
+                <span class="loader-status">INITIALIZING SYSTEMS</span>
+                <div class="progress-bar-container">
+                    <div id="loader-progress-bar" class="progress-bar-fill"></div>
+                </div>
+                <span id="loader-percentage" class="loader-percent">0%</span>
+            </div>
+        </div>
+    </div>
     <!-- HEADER -->
     <header class="header" id="header">
         <div class="container">
@@ -246,17 +269,17 @@
                         <li><a href="../enIndex.html#servicios">Workover</a></li>
                         <li><a href="../enIndex.html#servicios">Trailers</a></li>
                         <li><a href="../enIndex.html#servicios">Manufacturing</a></li>
+                        <li><a href="../enIndex.html#servicios">Tubing Rental</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-col">
+                <div class="footer-col">    
                     <h4 class="footer-heading">Company</h4>
                     <ul class="footer-links">
                         <li><a href="../enIndex.html#nosotros">About Us</a></li>
                         <li><a href="../enIndex.html#contacto">Contact</a></li>
                         <li><a href="../Translate/enFormWork.html">Work with Us</a></li>
                         <li><a href="../enBlog.html">Blog</a></li>
-                        <li><a href="../Translate/enHSEQ.html">HSEQ</a></li>
                         <li><a href="../Translate/enPoliticas.html">Privacy Policies</a></li>
                     </ul>
                 </div>
@@ -289,6 +312,6 @@
     <script src="../Static/Js/enModal.js"></script>
     <script src="../Static/Js/partners.js"></script>
     <script src="../Static/Js/backToTop.js"></script>
-
+    <script src="../Static/Js/preloader.js"></script>
 </body>
 </html>

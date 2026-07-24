@@ -1,0 +1,258 @@
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --color-white: #ffffff;
+    --color-text-muted: rgba(255, 255, 255, 0.7);
+    --color-accent: #c80000;
+    
+    /* Estilos Glassmorphism (Cristal) */
+    --glass-bg: rgba(20, 10, 10, 0.45);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-blur: blur(12px);
+    
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #0a0000;
+    color: var(--color-white);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ================= FONDO DE IMAGEN ================= */
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../Images/2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    filter: brightness(0.8) blur(4px);
+    transform: scale(1.05); 
+}
+
+.bg-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 0, 0, 0.258); 
+}
+
+.directory-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ================= HEADER ================= */
+.dir-header {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.dir-logo img {
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+.dir-title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+}
+
+.dir-subtitle {
+    font-size: 0.85rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+/* ================= BUSCADOR ================= */
+.search-wrapper {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.search-wrapper .search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 14px 20px 14px 50px;
+    border-radius: 30px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    color: var(--color-white);
+    font-size: 0.95rem;
+    font-family: var(--font-family);
+    transition: var(--transition);
+    outline: none;
+}
+
+#searchInput::placeholder {
+    color: var(--color-text-muted);
+}
+
+#searchInput:focus {
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(200, 0, 0, 0.2);
+    background: rgba(20, 10, 10, 0.6);
+}
+
+/* ================= GRID DE TARJETAS ================= */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+/* ================= TARJETA INDIVIDUAL ================= */
+.person-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-radius: 20px;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.person-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ================= AVATAR (Foto o Ícono) ================= */
+.card-avatar {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    overflow: hidden; 
+}
+
+.card-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.card-avatar i {
+    font-size: 2.5rem;
+    color: var(--color-white);
+    opacity: 0.8;
+}
+
+/* Textos de la tarjeta */
+.card-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+    letter-spacing: 1px;
+}
+
+.card-role {
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 2rem;
+}
+
+/* BOTÓN ESTILO BIO (Píldora Translúcida) */
+.btn-bio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-bio i {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.btn-bio:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Mensaje cuando no hay resultados */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    padding: 2rem;
+}
+
+/* ================= MEDIA QUERIES ================= */
+@media (max-width: 600px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dir-title { font-size: 1.8rem; }
+    .dir-subtitle { font-size: 0.75rem; }
+}

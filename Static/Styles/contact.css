@@ -1,0 +1,251 @@
+
+/* CONTACTO */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.contact-description {
+    font-size: 1.0625rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.7;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.contact-item {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-surface);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.contact-item h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+}
+
+.contact-item p {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-surface);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.whatsapp-mockup-wrapper {
+    width: 100%;
+    max-width: 400px;
+    height: 100%; 
+    margin: 0 auto;
+    position: relative;
+    display: flex; 
+}
+
+.whatsapp-phone {
+    background-color: #efeae2; /* Fondo beige clásico de WA */
+    /* Textura oficial de doodles de WhatsApp */
+    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+}
+
+/* Cabecera Verde Estilo App Móvil */
+.wa-header {
+    background: #008069; /* Verde oficial de la cabecera */
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    z-index: 2;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.wa-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* Fondo blanco si el logo es transparente */
+    flex-shrink: 0;
+}
+
+.wa-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción perfecta dentro del círculo */
+}
+
+.wa-info h4 {
+    margin: 0;
+    color: #ffffff !important; /* Blanco puro para "Asesor Full Services" */
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.wa-info p {
+    margin: 0;
+    color: #ffffff !important; /* El !important fuerza el color blanco por encima de todo */
+    font-size: 0.85rem; /* Lo subí un poquitito para que lea mejor */
+    font-weight: 500; /* Le da un poquito más de fuerza a la letra */
+}
+
+.wa-brand {
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    color: white; /* Logo en blanco para contrastar con el verde */
+}
+
+/* Cuerpo del chat */
+.wa-chat-body {
+    flex: 1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1;
+}
+
+/* Burbuja de fecha (Hoy) */
+.wa-date {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #54656f;
+    margin-bottom: 15px;
+    background: white;
+    padding: 5px 12px;
+    border-radius: 12px;
+    align-self: center;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+}
+
+/* Burbuja de Mensaje */
+.wa-message {
+    background: white;
+    color: #111b21;
+    padding: 8px 12px 10px 12px;
+    border-radius: 0 8px 8px 8px; /* Esquina superior izquierda recta */
+    font-size: 0.95rem;
+    line-height: 1.4;
+    max-width: 85%;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+/* El "piquito" del globo de mensaje (¡La magia del realismo!) */
+.wa-message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Área de Input */
+.wa-input-area {
+    background: #f0f2f5;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+}
+
+.wa-input-area input {
+    flex: 1;
+    background: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 24px;
+    color: #111b21;
+    font-size: 0.95rem;
+    outline: none;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.wa-input-area input::placeholder {
+    color: #8696a0;
+}
+
+.wa-send-btn {
+    background: #00a884; /* Verde clásico del botón enviar */
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    flex-shrink: 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.wa-send-btn:hover {
+    background: #008f6f;
+    transform: scale(1.05);
+}
+
+.wa-send-btn svg {
+    width: 20px;
+    height: 20px;
+    margin-left: -2px; 
+}  

@@ -1,0 +1,198 @@
+
+.footer {
+    background-color: var(--color-surface, #f8f9fa);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 4rem 0 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Línea superior decorativa con degradado suave */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-primary, #e63946), var(--color-primary-light, #ff4d5d), transparent);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 1fr 1.2fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Manejo Inteligente de Logos */
+.footer-brand {
+    margin-bottom: 1.2rem;
+}
+
+.footer-logo-link img {
+    max-height: 48px;
+    width: auto;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+/* Cambio dinámico según tema si usas clases en body/html */
+.logo-img-dark { display: none; }
+body.dark-theme .logo-img { display: none; }
+body.dark-theme .logo-img-dark { display: block; }
+
+.footer-text {
+    color: var(--color-text-secondary, #6c757d);
+    line-height: 1.7;
+    font-size: 0.925rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Redes Sociales en Formato Squircle Moderno */
+.footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    color: var(--color-text-secondary, #495057);
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.footer-social a:hover {
+    background-color: var(--color-primary, #e63946);
+    color: #ffffff;
+    border-color: var(--color-primary, #e63946);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(230, 57, 70, 0.25);
+}
+
+/* Encabezados de Columna con Línea de Acento */
+.footer-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text, #1a1a1a);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.6rem;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 28px;
+    height: 2px;
+    background-color: var(--color-primary, #e63946);
+    border-radius: 2px;
+}
+
+/* Enlaces con Micro-Animación de Desplazamiento */
+.footer-links,
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.footer-links a {
+    color: var(--color-text-secondary, #6c757d);
+    text-decoration: none;
+    font-size: 0.925rem;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary, #e63946);
+    transform: translateX(6px);
+}
+
+/* Lista de Contacto con Iconos Destacados */
+.footer-contact li {
+    color: var(--color-text-secondary, #6c757d);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.925rem;
+    line-height: 1.4;
+}
+
+.footer-contact i {
+    color: var(--color-primary, #e63946);
+    font-size: 0.95rem;
+    margin-top: 2px;
+    background: rgba(230, 57, 70, 0.08);
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Sección Inferior / Créditos */
+.footer-bottom {
+    padding-top: 1.8rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary, #6c757d);
+}
+
+.footer-bottom strong {
+    color: var(--color-text, #1a1a1a);
+    font-weight: 600;
+}
+
+.developer-credit a {
+    color: var(--color-primary, #e63946);
+    text-decoration: none;
+    font-weight: 700;
+    transition: opacity 0.2s;
+}
+
+.developer-credit a:hover {
+    text-decoration: underline;
+    opacity: 0.85;
+}
+
+/* Responsividad Impecable */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}

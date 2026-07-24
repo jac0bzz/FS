@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio de Personal - Full Services</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../Static/Images/FULL-ICO.ico">
+    
+    <!-- Fuentes e Iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../Static/Styles/directorio.css">
+</head>
+<body>
+
+    <!-- Fondo superpuesto con tu imagen 2.jpg -->
+    <div class="bg-overlay"></div>
+
+    <div class="directory-container">
+        
+        <!-- HEADER DEL DIRECTORIO -->
+        <header class="dir-header">
+            <!-- Icono/Logo de Full Services -->
+            <div class="dir-logo">
+                <img src="../Static/Images/Logo blanco.png" alt="Full Services Logo" onerror="this.src='../Static/Images/FULL-LOGO-H.png'">
+            </div>
+            
+            <h1 class="dir-title">FULL SERVICES</h1>
+            <p class="dir-subtitle">DIRECTORIO DE PERSONAL AUTORIZADO</p>
+            
+            <!-- BUSCADOR -->
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Buscar por nombre o cargo...">
+            </div>
+        </header>
+
+        <!-- CONTENEDOR DE TARJETAS (Grid) -->
+        <main class="cards-grid" id="cardsGrid">
+            <!-- Las tarjetas se generan dinámicamente con JavaScript -->
+        </main>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../Static/Js/directorio.js"></script>
+</body>
+</html>

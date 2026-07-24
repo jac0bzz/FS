@@ -1,0 +1,96 @@
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fichas Técnicas - Full Services</title>
+    
+    <link rel="icon" type="image/x-icon" href="../Static/Images/FULL-ICO.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../Static/Styles/ficha-tecnica.css">
+</head>
+<body>
+
+    <div class="bg-overlay"></div>
+
+    <div class="tech-container">
+        
+        <!-- HEADER -->
+        <header class="tech-header">
+            <div class="brand">
+                <img src="../Static/Images/Logo blanco.png" alt="Full Services Logo" class="brand-logo" onerror="this.src='../Static/Images/FULL-LOGO-H.png'">
+                <div>
+                    <h1 id="rigTitle">RIG 161</h1>
+                    <p class="brand-subtitle">OPERATIONS SPECIFICATIONS</p>
+                </div>
+            </div>
+
+            <!-- SELECTOR DE RIGS -->
+            <div class="rig-selector">
+                <label for="rigSelect"><i class="fa-solid fa-truck-monster"></i> Select Rig:</label>
+                <select id="rigSelect">
+                    <option value="161">RIG 161 (Cooper 550HP)</option>
+                    <option value="162">RIG 162 (Mustang 600HP)</option>
+                    <option value="163">RIG 163 (Taylor TI-500HP)</option>
+                    <option value="164">RIG 164 (XJ 350HP)</option>
+                    <option value="165">RIG 165 (Helicoportado Thor 550HP)</option>
+                    <option value="166">RIG 166 (RG XJ 550HP)</option>
+                    <option value="167">RIG 167 (Thor 450HP)</option>
+                </select>
+            </div>
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="tech-content">
+            
+            <!-- PANEL IZQUIERDO: FOTO Y GENERALES -->
+            <section class="tech-card">
+                <h2><i class="fa-solid fa-gears"></i> General Specifications</h2>
+                
+                <!-- CONTENEDOR DE FOTO DEL RIG -->
+                <div class="rig-image-container">
+                    <img id="rigImage" src="" alt="Foto del RIG">
+                    <span class="image-badge" id="rigBadge">RIG 161</span>
+                </div>
+
+                <p id="rigDesc" class="description-text"></p>
+                
+                <table class="data-table">
+                    <tbody id="generalSpecs"></tbody>
+                </table>
+            </section>
+
+            <!-- PANEL DERECHO: TORRE Y SUBESTRUCTURA -->
+            <section class="tech-card">
+                <h2><i class="fa-solid fa-tower-cell"></i> Tower & Capacity</h2>
+                <table class="data-table">
+                    <tbody id="towerSpecs"></tbody>
+                </table>
+
+                <h2 class="sub-heading"><i class="fa-solid fa-layer-group"></i> Substructure & Rotation</h2>
+                <table class="data-table">
+                    <tbody id="subSpecs"></tbody>
+                </table>
+            </section>
+
+        </main>
+
+        <!-- FOOTER CORPORATIVO -->
+        <footer class="tech-footer">
+            <p><i class="fa-solid fa-shield-halved"></i> Integrated systems designed to comply with national and international technical standards.</p>
+            <div class="contact-info">
+                <span><i class="fa-solid fa-location-dot"></i> Main Base: Madrid, Km 27 on the Fontibón–Facatativá Road</span>
+                <span><i class="fa-solid fa-envelope"></i> sjfs@fullservices.com.co</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="../Static/Js/enFicha.js"></script>
+</body>
+</html>

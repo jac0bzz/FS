@@ -1,0 +1,230 @@
+
+/* === HERO SECTION === */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+/* === BACKGROUND === */
+.bg1 {
+    background-image: url('../../Static/Images/FULL-IMG3-CARRUSEL.webp');
+}
+
+.bg2 {
+    background-image: url('../../Static/Images/FULL-IMG2-CARRUSEL.webp');
+}
+
+.bg3 {
+    background-image: url('../../Static/Images/FULL-IMG4-CARRUSEL.webp');
+}
+
+.hero-background-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    z-index: 1;
+}
+
+.hero-background.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(192, 58, 43, 0.35), rgba(71, 7, 0, 0.9));
+    z-index: 3;
+}
+
+/* === CONTENT === */
+.hero-content {
+    position: relative;
+    z-index: 4;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* === LOGO === */
+.hero-logo {
+    width: 300px;
+    margin-bottom: 1rem; 
+    filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.5));
+    animation: fadeInUp 1.2s ease;
+}
+
+/* === TITULO EFECTO ESCRITURA === */
+.hero-title {
+    font-size: clamp(3.5rem, 8vw, 5.8rem);
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+}
+
+.typing {
+    display: inline-block;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1.2em;
+    background: #fff;
+    margin-left: 3px;
+    animation: blink 0.8s infinite;
+    vertical-align: middle;
+}
+
+/* === SUBTÍTULO 2: INGENIERÍA AVANZADA === */
+.hero-subtitle2 {
+    font-size: 1.6rem; 
+    color: #ffffffcc;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1.4s ease;
+}
+
+/* === SUBTÍTULO PRINCIPAL === */
+.hero-subtitle {
+    max-width: 650px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    font-size: 1.15rem;
+    margin-bottom: 2.2rem;
+    line-height: 1.7;
+    animation: fadeInUp 1.6s ease;
+}
+
+/* === BOTONES === */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeInUp 1.8s ease;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn.pro {
+    padding: 1rem 2.4rem;
+    font-size: 1.05rem;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+}
+
+.btn.pro:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-background);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: var(--color-primary);
+}
+
+/* === SCROLL INDICATOR === */
+.scroll-indicator {
+    position: absolute;
+    bottom: var(--spacing-md);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.scroll-arrow {
+    width: 30px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    position: relative;
+}
+
+.scroll-arrow::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: scroll 2s infinite;
+}
+
+/* SCROLL */
+.scroll-indicator {
+    position: absolute;
+    bottom: var(--spacing-md);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.scroll-arrow {
+    width: 30px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    position: relative;
+}
+
+.scroll-arrow::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: scroll 2s infinite;
+}

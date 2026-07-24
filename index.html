@@ -28,13 +28,21 @@
     <meta name="twitter:url" content="https://jforero-dev.github.io/FULL-SERVICES/">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="Static/Images/FULL-LOGO.ico">
+    <link rel="icon" type="image/x-icon" href="Static/Images/FULL-ICO.ico">
 
     <!-- Styles -->
     <link rel="stylesheet" href="Static/Styles/styles.css">
     <link rel="stylesheet" href="Static/Styles/responsive.css">
     <link rel="stylesheet" href="Static/Styles/darkmode.css">
     <link rel="stylesheet" href="Static/Styles/animations.css">
+    <link rel="stylesheet" href="Static/Styles/navbar.css">
+    <link rel="stylesheet" href="Static/Styles/hero.css">
+    <link rel="stylesheet" href="Static/Styles/about.css">
+    <link rel="stylesheet" href="Static/Styles/services.css">
+    <link rel="stylesheet" href="Static/Styles/map.css">
+    <link rel="stylesheet" href="Static/Styles/partners.css">
+    <link rel="stylesheet" href="Static/Styles/contact.css">
+    <link rel="stylesheet" href="Static/Styles/footer.css">
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +51,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div id="site-preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="logo-loader-wrapper">
+                <div class="tech-ring"></div>
+                <div class="tech-ring-inner"></div>
+                
+                <div class="loader-logo-box">
+                    <img src="Static/Images/Logo blanco.png" alt="Full Services" class="loader-logo">
+                </div>
+            </div>
+
+            <div class="loader-text-group">
+                <span class="loader-status">INICIALIZANDO SISTEMAS</span>
+                <div class="progress-bar-container">
+                    <div id="loader-progress-bar" class="progress-bar-fill"></div>
+                </div>
+                <span id="loader-percentage" class="loader-percent">0%</span>
+            </div>
+        </div>
+    </div>
+    
     <!-- HEADER -->
     <header class="header" id="header">
         <div class="container">
@@ -215,335 +244,202 @@
                 </div>
                 
                 <button id="nextSlide" aria-label="Siguiente">&#10095;</button>
-                
-                <a href="Templates/organigrama.html" class="cta-button">CONÓCENOS</a>
             </div>
         </div>
     </div>
     </section>
 
     <!-- SERVICIOS -->
+    <section class="rigs-bento-section">
+        <div class="container">
+            <div class="section-header split-header reveal">
+                <div class="split-left">
+                    <span class="section-label">Nuestros Equipos</span>
+                    <h2 class="section-title">Equipos confiables que garantizan la continuidad operativa</h2>
+                </div>
+                <div class="split-right">
+                    <p class="section-description">
+                        No dejamos nada al azar. Contamos con un robusto inventario de Rigs certificados y de última tecnología, con la potencia exacta para ejecutar proyectos exigentes de manera impecable.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bento-grid">
+                <a href="Templates/ficha-tecnica.html" class="bento-card bento-feature">
+                    <img src="Static/Images/equipos/RIG161.jpg" alt="Rig 161" class="bento-img">
+                    <div class="bento-overlay"></div>
+                    <span class="bento-status status-available"><span class="pulse-dot"></span> Disponible</span>
+                    <div class="bento-content">
+                        <h3 class="bento-title">RIG 161</h3>
+                        <div class="bento-specs">
+                            <span><i class="fa-solid fa-industry"></i> Cooper</span>
+                            <span><i class="fa-solid fa-arrows-up-down"></i> 12,000 fts</span>
+                            <span class="bento-loc"><i class="fa-solid fa-location-dot"></i> Orito</span>
+                        </div>
+                        <div class="bento-action">Ver ficha técnica <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+
+                <a href="Templates/ficha-tecnica.html" class="bento-card">
+                    <img src="Static/Images/equipos/rig162.jpeg" alt="Rig 162" class="bento-img">
+                    <div class="bento-overlay"></div>
+                    <span class="bento-status status-inuse">En Uso</span>
+                    <div class="bento-content">
+                        <h3 class="bento-title">RIG 162</h3>
+                        <div class="bento-specs">
+                            <span><i class="fa-solid fa-industry"></i> Rig Works</span>
+                            <span class="bento-loc"><i class="fa-solid fa-location-dot"></i> Yopal</span>
+                        </div>
+                        <div class="bento-action">Detalles <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+
+                <a href="Templates/ficha-tecnica.html" class="bento-card">
+                    <img src="Static/Images/equipos/RIG163.jpeg" alt="Rig 163" class="bento-img">
+                    <div class="bento-overlay"></div>
+                    <span class="bento-status status-inuse">En Uso</span>
+                    <div class="bento-content">
+                        <h3 class="bento-title">RIG 163</h3>
+                        <div class="bento-specs">
+                            <span><i class="fa-solid fa-industry"></i> Taylor Ind.</span>
+                            <span class="bento-loc"><i class="fa-solid fa-location-dot"></i> Yopal</span>
+                        </div>
+                        <div class="bento-action">Detalles <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+
+                <a href="Templates/ficha-tecnica.html" class="bento-card">
+                    <img src="Static/Images/equipos/ig164.jpeg" alt="Rig 164" class="bento-img">
+                    <div class="bento-overlay"></div>
+                    <span class="bento-status status-available">Disponible</span>
+                    <div class="bento-content">
+                        <h3 class="bento-title">RIG 164</h3>
+                        <div class="bento-specs">
+                            <span><i class="fa-solid fa-industry"></i> Tonghua</span>
+                            <span class="bento-loc"><i class="fa-solid fa-location-dot"></i> Orito</span>
+                        </div>
+                        <div class="bento-action">Detalles <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+
+                <a href="Templates/ficha-tecnica.html" class="bento-card">
+                    <img src="Static/Images/rig 4.jpeg" alt="Rig 165" class="bento-img">
+                    <div class="bento-overlay"></div>
+                    <span class="bento-status status-available">Disponible</span>
+                    <div class="bento-content">
+                        <h3 class="bento-title">RIG 165</h3>
+                        <div class="bento-specs">
+                            <span><i class="fa-solid fa-industry"></i> Thor</span>
+                            <span class="bento-loc"><i class="fa-solid fa-location-dot"></i> Madrid</span>
+                        </div>
+                        <div class="bento-action">Detalles <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+
+                <a href="Templates/ficha-tecnica.html" class="bento-card">
+                    <img src="Static/Images/equipos/rig166.jpeg" alt="Rig 166" class="bento-img">
+                    <div class="bento-overlay"></div>
+                    <span class="bento-status status-available">Disponible</span>
+                    <div class="bento-content">
+                        <h3 class="bento-title">RIG 166</h3>
+                        <div class="bento-specs">
+                            <span><i class="fa-solid fa-industry"></i> RG Group</span>
+                            <span class="bento-loc"><i class="fa-solid fa-location-dot"></i> Orito</span>
+                        </div>
+                        <div class="bento-action">Detalles <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+
+                <a href="Templates/ficha-tecnica.html" class="bento-card bento-wide">
+                    <img src="Static/Images/equipos/rig167s.jpeg" alt="Rig 167" class="bento-img">
+                    <div class="bento-overlay"></div>
+                    <span class="bento-status status-inuse">En Uso</span>
+                    <div class="bento-content">
+                        <h3 class="bento-title">RIG 167</h3>
+                        <div class="bento-specs">
+                            <span><i class="fa-solid fa-industry"></i> Thordynamic Thor 450HP</span>
+                            <span><i class="fa-solid fa-arrows-up-down"></i> 6,600 fts</span>
+                            <span class="bento-loc"><i class="fa-solid fa-location-dot"></i> Melgar, CO</span>
+                        </div>
+                        <div class="bento-action">Explorar en detalle <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section class="services" id="servicios">
         <div class="container">
-            <div class="section-header reveal">
+            <div class="section-header center-header reveal">
                 <span class="section-label">Nuestros Servicios</span>
-                <h2 class="section-title">Ingeniería y operaciones confiables que mantienen tu operación en marcha</h2>
+                <h2 class="section-title">Maximizamos el rendimiento y la vida útil de tus pozos</h2>
                 <p class="section-description">
-                    Full Services respalda la intervención y el soporte de pozos con servicios de workover confiables, seguros y eficientes, asegurando la continuidad de cada operación.
+                    Superamos los desafíos más complejos del sector. Brindamos soporte integral y servicios de workover diseñados para reducir tiempos de inactividad, proteger tu inversión y disparar la productividad.
                 </p>
             </div>
 
-            <div class="services-grid">
-                <!-- Servicio 1 -->
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-oil-well"></i>
+            <div class="services-accordion">
+                <div class="accordion-item" style="background-image: url('Static/Images/workover.png');">
+                    <div class="accordion-overlay"></div>
+                    <div class="accordion-content">
+                        <div class="accordion-header">
+                            <div class="service-icon"><i class="fa-solid fa-oil-well"></i></div>
+                            <h3 class="service-title">Workover</h3>
+                        </div>
+                        <div class="accordion-body">
+                            <p class="service-description">Ejecutamos trabajos de workover para la optimización y reacondicionamiento de pozos, aplicando procedimientos seguros que maximizan la producción y la continuidad operativa.</p>
+                            <button class="btn-modal" data-service="1" data-whatsapp-link="">Ver más</button>
+                        </div>
                     </div>
-                    <h3 class="service-title">Workover</h3>
-                    <p class="service-description">
-                        Ejecutamos trabajos de workover para la optimización y reacondicionamiento de pozos, aplicando procedimientos seguros que maximizan la producción y la continuidad operativa.
-                    </p>
-                    <button class="btn-modal" data-service="1" data-whatsapp-link="">
-                        Ver más
-                    </button>
                 </div>
 
-                <!-- Servicio 2 -->
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-truck-monster"></i>
+                <div class="accordion-item" style="background-image: url('Static/Images/trailer.png');">
+                    <div class="accordion-overlay"></div>
+                    <div class="accordion-content">
+                        <div class="accordion-header">
+                            <div class="service-icon"><i class="fa-solid fa-truck-monster"></i></div>
+                            <h3 class="service-title">Alquiler</h3>
+                        </div>
+                        <div class="accordion-body">
+                            <p class="service-description">Alquiler de trailers con mantenimiento certificado, disponibilidad inmediata y respaldo técnico permanente, garantizando operaciones continuas y seguras.</p>
+                            <button class="btn-modal" data-service="6" data-whatsapp-link="">Ver más</button>
+                        </div>
                     </div>
-                    <h3 class="service-title">Alquiler</h3>
-                    <p class="service-description">
-                        Alquiler de trailers con mantenimiento certificado, disponibilidad inmediata y respaldo técnico permanente, diseñados para garantizar operaciones continuas, seguras y eficientes en entornos exigentes.
-                    </p>
-                    <button class="btn-modal" data-service="6" data-whatsapp-link="">
-                        Ver más
-                    </button>
                 </div>
-            
-                <!-- Servicio 3 -->
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                
+                <div class="accordion-item" style="background-image: url('Static/Images/fabricacion.png');">
+                    <div class="accordion-overlay"></div>
+                    <div class="accordion-content">
+                        <div class="accordion-header">
+                            <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                            <h3 class="service-title">Fabricación</h3>
+                        </div>
+                        <div class="accordion-body">
+                            <p class="service-description">Fabricamos trailers industriales bajo especificaciones técnicas y controles de calidad estrictos, garantizando resistencia y un desempeño confiable.</p>
+                            <button class="btn-modal" data-service="3" data-whatsapp-link="">Ver más</button>
+                        </div>
                     </div>
-                    <h3 class="service-title">Fabricación</h3>
-                    <p class="service-description">
-                        Fabricamos trailers industriales bajo especificaciones técnicas y controles de calidad estrictos, garantizando resistencia estructural, seguridad operativa y un desempeño confiable que respalda cada operación.
-                    </p>
-                    <button class="btn-modal" data-service="3" data-whatsapp-link="">
-                        Ver más
-                    </button>
                 </div>
 
-                <div class="service-card reveal">
-                    <div class="service-icon">
-                        <i class="fa-solid fa-oil-can"></i>
+                <div class="accordion-item" style="background-image: url('Static/Images/tuberia.png');">
+                    <div class="accordion-overlay"></div>
+                    <div class="accordion-content">
+                        <div class="accordion-header">
+                            <div class="service-icon"><i class="fa-solid fa-oil-can"></i></div>
+                            <h3 class="service-title">Alquiler Tubería</h3>
+                        </div>
+                        <div class="accordion-body">
+                            <p class="service-description">Alquiler de tubería petrolera en mm con mantenimiento certificado y disponibilidad inmediata para tus proyectos.</p>
+                            <button class="btn-modal" data-service="4" data-whatsapp-link="">Ver más</button>
+                        </div>
                     </div>
-                    <h3 class="service-title">Alquiler Tuberia</h3>
-                    <p class="service-description">
-                        Alquiler de tubería petrolera en mm con mantenimiento certificado y disponibilidad inmediata.
-                    </p>
-                    <button class="btn-modal" data-service="4" data-whatsapp-link="">
-                        Ver más
-                    </button>
                 </div>
             </div>
-                
+            
             <div class="modal" id="serviceModal">
                 <div class="modal-content">
                     <span class="modal-close">&times;</span>
                     <div id="modalBody"></div>
-                    </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="rigs-section">
-        <div class="section-header reveal">
-            <h2 class="section-title">Equipos confiables que garantizan la continuidad operativa</h2>
-            <p class="section-description">
-                Conoce nuestra línea de equipos diseñados bajo estándares técnicos que aseguran eficiencia, seguridad y alto rendimiento operativo.
-            </p>
-        </div>
-        <div class="rigs-grid">
-            <div class="rig-card">
-                <div class="rig-inner">
-                    <!-- Card 1 -->
-                    <div class="rig-front">
-                        <img src="Static/Images/equipos/RIG161.jpg" alt="Workover Rig WR-1000" class="rig-img">
-                        <div class="rig-info">
-                            <h3 class="rig-name">RIG 161</h3>
-                            <div class="rig-meta">
-                                <a href="https://maps.app.goo.gl/NUPuQLWVh3PZKrkt5" class="rig-location" target="_blank">
-                                    <i class="fa-solid fa-location-dot"></i> Orito, CO
-                                </a>
-                                <span class="rig-status available">Disponible</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Reverso -->
-                    <div class="rig-back">
-                        <h3>RIG 161</h3>
-                        <p>
-                            Unidad de Workover autopropulsada diseñada para operaciones de alto rendimiento y confiabilidad.
-                        </p>
-                        <ul>
-                            <li><strong>Fabricante:</strong> Cooper Munufacturing Corp.</li>
-                            <li><strong>Modelo:</strong> LTO 550HP</li>
-                            <li><strong>Profundidad:</strong> 12000 fts</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="rig-card">
-                <div class="rig-inner">
-                    <!-- Card 2 -->
-                    <div class="rig-front">
-                        <img src="Static/Images/equipos/rig162.jpeg" alt="Workover Rig WR-1000" class="rig-img">
-                        <div class="rig-info">
-                            <h3 class="rig-name">RIG 162</h3>
-                            <div class="rig-meta">
-                                <a href="https://maps.app.goo.gl/UHDpXvnm1KDKyxzj8" class="rig-location" target="_blank">
-                                    <i class="fa-solid fa-location-dot"></i> Yopal, CO
-                                </a>
-                                <span class="rig-status inuse">En uso</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Reverso -->
-                    <div class="rig-back">
-                        <h3>RIG 162</h3>
-                        <p>
-                            Unidad de Workover autopropulsada diseñada para operaciones de alto rendimiento y confiabilidad.
-                        </p>
-                        <ul>
-                            <li><strong>Fabricante:</strong> Rig Works</li>
-                            <li><strong>Modelo:</strong> Mustang 600HP</li>
-                            <li><strong>Profundidad:</strong> 14000 fts</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="rig-card">
-                <div class="rig-inner">
-                    <!-- Card 3 -->
-                    <div class="rig-front">
-                        <img src="Static/Images/equipos/RIG163.jpeg" alt="Workover Rig WR-1000" class="rig-img">
-                        <div class="rig-info">
-                            <h3 class="rig-name">RIG 163</h3>
-                            <div class="rig-meta">
-                                <a href="https://maps.app.goo.gl/UHDpXvnm1KDKyxzj8" class="rig-location" target="_blank">
-                                    <i class="fa-solid fa-location-dot"></i> Yopal, CO
-                                </a>
-                                <span class="rig-status inuse">En uso</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Reverso -->
-                    <div class="rig-back">
-                        <h3>RIG 166</h3>
-                        <p>
-                            Unidad de Workover autopropulsada diseñada para operaciones de alto rendimiento y confiabilidad.
-                        </p>
-                        <ul>
-                            <li><strong>Fabricante:</strong> Taylor industries</li>
-                            <li><strong>Modelo:</strong> TI-500HP</li>
-                            <li><strong>Profundidad:</strong> 14000 fts</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="rig-card">
-                <div class="rig-inner">
-                    <!-- Card 4 -->
-                    <div class="rig-front">
-                        <img src="Static/Images/equipos/ig164.jpeg" alt="Workover Rig WR-1000" class="rig-img">
-                        <div class="rig-info">
-                            <h3 class="rig-name">RIG 164</h3>
-                            <div class="rig-meta">
-                                <a href="https://maps.app.goo.gl/NUPuQLWVh3PZKrkt5" class="rig-location" target="_blank">
-                                    <i class="fa-solid fa-location-dot"></i> Orito, CO
-                                </a>
-                                <span class="rig-status available">Disponible</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Reverso -->
-                    <div class="rig-back">
-                        <h3>RIG 165</h3>
-                        <p>
-                            Unidad de Workover autopropulsada diseñada para operaciones de alto rendimiento y confiabilidad.
-                        </p>
-                        <ul>
-                            <li><strong>Fabricante:</strong> Tonghua Petro Chemical Machinery</li>
-                            <li><strong>Modelo:</strong> XJ 350HP</li>
-                            <li><strong>Profundidad:</strong> 8000 fts</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="rig-card">
-                <div class="rig-inner">
-                    <!-- Card 4 -->
-                    <div class="rig-front">
-                        <img src="Static/Images/rig 4.jpeg" alt="Workover Rig WR-1000" class="rig-img">
-                        <div class="rig-info">
-                            <h3 class="rig-name">RIG 165</h3>
-                            <div class="rig-meta">
-                                <a href="https://maps.app.goo.gl/5vuyT9EuroxXRqdK8" class="rig-location" target="_blank">
-                                    <i class="fa-solid fa-location-dot"></i> Madrid, CO
-                                </a>
-                                <span class="rig-status available">Disponible</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Reverso -->
-                    <div class="rig-back">
-                        <h3>RIG 165</h3>
-                        <p>
-                            Unidad de Workover autopropulsada diseñada para operaciones de alto rendimiento y confiabilidad.
-                        </p>
-                        <ul>
-                            <li><strong>Fabricante:</strong> Thordynamic</li>
-                            <li><strong>Modelo:</strong> Thor 550HP</li>
-                            <li><strong>Profundidad:</strong> 10000 fts</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="rig-card">
-                <div class="rig-inner">
-                    <!-- Card 4 -->
-                    <div class="rig-front">
-                        <img src="Static/Images/equipos/rig166.jpeg" alt="Workover Rig WR-1000" class="rig-img">
-                        <div class="rig-info">
-                            <h3 class="rig-name">RIG 166</h3>
-                            <div class="rig-meta">
-                                <a href="https://maps.app.goo.gl/NUPuQLWVh3PZKrkt5" class="rig-location" target="_blank">
-                                    <i class="fa-solid fa-location-dot"></i> Orito, CO
-                                </a>
-                                <span class="rig-status available">Disponible</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Reverso -->
-                    <div class="rig-back">
-                        <h3>RIG 165</h3>
-                        <p>
-                            Unidad de Workover autopropulsada diseñada para operaciones de alto rendimiento y confiabilidad.
-                        </p>
-                        <ul>
-                            <li><strong>Fabricante:</strong> RG GROUP</li>
-                            <li><strong>Modelo:</strong> XJ 550HP</li>
-                            <li><strong>Profundidad:</strong> 10000 fts</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="rig-card">
-                <div class="rig-inner">
-                    <!-- Card 4 -->
-                    <div class="rig-front">
-                        <img src="Static/Images/equipos/rig167s.jpeg" alt="Workover Rig WR-1000" class="rig-img">
-                        <div class="rig-info">
-                            <h3 class="rig-name">RIG 167</h3>
-                            <div class="rig-meta">
-                                <a href="https://maps.app.goo.gl/XrGVxY3JWaM2qVgS6" class="rig-location" target="_blank">
-                                    <i class="fa-solid fa-location-dot"></i> Melgar, CO
-                                </a>
-                                <span class="rig-status inuse">En Uso</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Reverso -->
-                    <div class="rig-back">
-                        <h3>RIG 167</h3>
-                        <p>
-                            Unidad de Workover autopropulsada diseñada para operaciones de alto rendimiento y confiabilidad.
-                        </p>
-                        <ul>
-                            <li><strong>Fabricante:</strong> Thordynamic</li>
-                            <li><strong>Modelo:</strong> Thor 450 HP</li>
-                            <li><strong>Profundidad:</strong> 6600 fts</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <!-- ESTADISTICAS -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item reveal">
-                    <div class="stat-number" data-target="30">0</div>
-                    <div class="stat-label">Años de Experiencia</div>
-                </div>
-                <div class="stat-item reveal">
-                    <div class="stat-number" data-target="500">0</div>
-                    <div class="stat-label">Proyectos Completados</div>
-                </div>
-                <div class="stat-item reveal">
-                    <div class="stat-number" data-target="90">0</div>
-                    <div class="stat-label">Clientes Satisfechos</div>
-                </div>
-                <div class="stat-item reveal">
-                    <div class="stat-number" data-target="75">0</div>
-                    <div class="stat-label">Cobertura Nacional %</div>
                 </div>
             </div>
         </div>
@@ -666,92 +562,95 @@
                     </div>
                 </div>
 
-                <div class="contact-form-wrapper reveal">
-                    <form form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nombre completo</label>
-                            <input type="text" id="name" name="name" required>
-                            <span class="error-message" id="nameError"></span>
+                <div class="whatsapp-mockup-wrapper reveal">
+                    <div class="whatsapp-phone">
+                        <!-- Cabecera del Chat -->
+                        <div class="wa-header">
+                            <div class="wa-avatar">
+                                <!-- Reemplaza "ruta-de-tu-logo.jpg" por la URL o ruta local de la imagen de Full Services -->
+                                <img src="Static/Images/full.webp" alt="Full Services Logo">
+                            </div>
+                            <div class="wa-info">
+                                <h4>Asesor Full Services</h4>
+                                <p>En línea</p>
+                            </div>
+                            <div class="wa-brand">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                            </div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="email">Correo electrónico</label>
-                            <input type="email" id="email" name="email" required>
-                            <span class="error-message" id="emailError"></span>
+                        
+                        <!-- Cuerpo del Chat -->
+                        <div class="wa-chat-body">
+                            <div class="wa-date">Hoy</div>
+                            <div class="wa-message received">
+                                ¡Hola! 👋 Bienvenido a Full Services. ¿En qué podemos ayudarte con tus operaciones hoy?
+                            </div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="phone">Teléfono</label>
-                            <input type="tel" id="phone" name="phone">
-                            <span class="error-message" id="phoneError"></span>
+                        
+                        <!-- Área de Input -->
+                        <div class="wa-input-area">
+                            <input type="text" id="wa-user-message" placeholder="Escribe tu mensaje aquí..." onkeypress="handleWaKeyPress(event)">
+                            <button class="wa-send-btn" onclick="sendToWhatsApp()" aria-label="Enviar a WhatsApp">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            </button>
                         </div>
-
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                            <span class="error-message" id="messageError"></span>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-full">
-                            Enviar Mensaje
-                        </button>
-
-                        <div class="form-success" id="formSuccess">
-                            ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MAPA -->
-    <section class="mapas">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-label">Nuestras sedes</span>
-                <h2 class="section-title">Presencia en todo el país</h2>
-            </div>
-            
-            <div class="mapas-grid">
-                <div class="map-card reveal">
-                    <h3 class="map-title">
-                        <i class="fa-solid fa-location-dot"></i> Yopal
-                    </h3>
-                    <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.655271960876!2d-72.42427492418597!3d5.316356436011219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6b0dbf4d9fb809%3A0x9fcc7ea1532a4352!2sS%26J%20Full%20Services!5e0!3m2!1ses!2sco!4v1760480343173!5m2!1ses!2sco" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-                
-                <div class="map-card reveal">
-                    <h3 class="map-title">
-                        <i class="fa-solid fa-location-dot"></i> Madrid
-                    </h3>
-                    <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.099638842035!2d-74.29901512418667!3d4.75271504120272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f798230c6f6eb%3A0x5f293df427fae451!2sFull%20Services%20SAS!5e0!3m2!1ses!2sco!4v1760480305536!5m2!1ses!2sco" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-
-                <div class="map-card reveal">
-                    <h3 class="map-title">
-                        <i class="fa-solid fa-location-dot"></i> Orito
-                    </h3>
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.771756710535!2d-76.87951883481423!3d0.6724769406304122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e28f37880581129%3A0xc80f256d00b43d22!2sOrito%2C%20Putumayo!5e0!3m2!1ses!2sco!4v1760638190523!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
+    <!-- ESTADISTICAS -->
+    <section class="presence-section-elite">
+    <div class="container" style="max-width: 1250px; margin: 0 auto;">
+        
+        <div class="section-header center-header reveal">
+            <span class="section-label">Cobertura Nacional</span>
+            <h2 class="section-title">Presencia en todo el país</h2>
         </div>
+
+        <div class="elite-map-container reveal">
+            
+            <div class="map-layer">
+                <iframe id="map-yopal" class="map-iframe active" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.655271960876!2d-72.42427492418597!3d5.316356436011219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6b0dbf4d9fb809%3A0x9fcc7ea1532a4352!2sS%26J%20Full%20Services!5e0!3m2!1ses!2sco!4v1760480343173!5m2!1ses!2sco" allowfullscreen="" loading="lazy"></iframe>
+                <iframe id="map-madrid" class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.099638842035!2d-74.29901512418667!3d4.75271504120272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f798230c6f6eb%3A0x5f293df427fae451!2sFull%20Services%20SAS!5e0!3m2!1ses!2sco!4v1760480305536!5m2!1ses!2sco" allowfullscreen="" loading="lazy"></iframe>
+                <iframe id="map-orito" class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.771756710535!2d-76.87951883481423!3d0.6724769406304122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e28f37880581129%3A0xc80f256d00b43d22!2sOrito%2C%20Putumayo!5e0!3m2!1ses!2sco!4v1760638190523!5m2!1ses!2sco" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="floating-glass-panel">
+                <h3 class="glass-title"><i class="fa-solid fa-chart-line"></i> Telemetría Operativa</h3>
+                <div class="glass-stats-grid">
+                    <div class="glass-stat">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <div class="glass-val"><span data-target="30">0</span>+</div>
+                        <div class="glass-label">Años de Exp.</div>
+                    </div>
+                    <div class="glass-stat">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                        <div class="glass-val"><span data-target="500">0</span>+</div>
+                        <div class="glass-label">Proyectos</div>
+                    </div>
+                    <div class="glass-stat">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                        <div class="glass-val"><span data-target="90">0</span>%</div>
+                        <div class="glass-label">Satisfacción</div>
+                    </div>
+                    <div class="glass-stat">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <div class="glass-val"><span data-target="75">0</span>%</div>
+                        <div class="glass-label">Cobertura</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="floating-controls">
+                <button class="glass-btn active" data-map="map-yopal">Yopal</button>
+                <button class="glass-btn" data-map="map-madrid">Madrid</button>
+                <button class="glass-btn" data-map="map-orito">Orito</button>
+            </div>
+
+        </div>
+    </div>
     </section>
 
     <!-- Modal de contactos -->
@@ -795,6 +694,15 @@
                     <i class="fa-solid fa-oil-well"></i>
                 </div>
 
+                <div class="wa-item" onclick="window.open('https://wa.link/mi5n03', '_blank')">
+                    <i class="fa-brands fa-whatsapp wa-icon-left"></i>
+                    <div class="wa-info">
+                        <h4>Alquiler Tubería</h4>
+                        <p>En línea ahora</p>
+                    </div>
+                    <i class="fa-solid fa-oil-can"></i>
+                </div>
+
             </div>
         </div>
     </div>
@@ -806,76 +714,73 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                
-                <div class="footer-col">
-                    <h3 class="footer-title">
-                        <div class="logo">
-                            <a href="#inicio">
-                                <img class="logo-img" src="Static/Images/FULL-LOGO-H.png" alt="Logo Full Services SAS">
-                                <img class="logo-img-dark" src="Static/Images/logo prueba.png" alt="Logo Full Services SAS">
-                            </a>
-                        </div>
-                    </h3>
-                    <p class="footer-text">
-                        Servicios de workover ejecutados por personal calificado y bajo procedimientos técnicos que garantizan confiabilidad y desempeño operativo.
-                    </p>
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/fullservicesingenieria/?ref=pages_you_manage" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/fullservicessas/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/full-services-sas" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://wa.link/mi5n03" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://www.youtube.com/channel/UCM24jb9IC27P_QPR2GwM6fw"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="bio.html"><i class="fa-solid fa-link"></i></a>
-                    </div>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <a href="#inicio" class="footer-logo-link">
+                        <img class="logo-img" src="Static/Images/FULL-LOGO-H.png" alt="Logo Full Services SAS">
+                        <img class="logo-img-dark" src="Static/Images/logo prueba.png" alt="Logo Full Services SAS">
+                    </a>
                 </div>
-                
-                <div class="footer-col">
-                    <h4 class="footer-heading">Servicios</h4>
-                    <ul class="footer-links">
-                        <li><a href="#servicios">Workover</a></li>
-                        <li><a href="#servicios">Alquiler</a></li>
-                        <li><a href="#servicios">Fabricación</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4 class="footer-heading">Empresa</h4>
-                    <ul class="footer-links">
-                        <li><a href="#nosotros">Sobre Nosotros</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                        <li><a href="Templates/formwork.html">Trabaja con Nosotros</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="Templates/HSEQ.html">HSEQ</a></li>
-                        <li><a href="Templates/politicas.html">Políticas de Privacidad</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4 class="footer-heading">Contacto</h4>
-                    <ul class="footer-contact">
-                        <li><i class="fa-solid fa-location-dot"></i> Madrid Cund. Yopal, Orito</li>
-                        <li><i class="fa-solid fa-phone"></i> +57 314 821 0883</li>
-                        <li><i class="fa-solid fa-envelope"></i> sjfs@fullservices.com.co</li>
-                    </ul>
+                <p class="footer-text">
+                    Servicios de workover ejecutados por personal calificado y bajo procedimientos técnicos que garantizan confiabilidad y desempeño operativo.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/fullservicesingenieria/?ref=pages_you_manage" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/fullservicessas/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/full-services-sas" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://wa.link/mi5n03" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.youtube.com/channel/UCM24jb9IC27P_QPR2GwM6fw" aria-label="YouTube" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="bio.html" aria-label="Bio Link"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 <strong>S&J Full Services S.A.S</strong>. Todos los derechos reservados.</p>
+            
+            <div class="footer-col">
+                <h4 class="footer-heading">Servicios</h4>
+                <ul class="footer-links">
+                    <li><a href="#servicios">Workover</a></li>
+                    <li><a href="#servicios">Alquiler</a></li>
+                    <li><a href="#servicios">Fabricación</a></li>
+                    <li><a href="#servicios">Alquiler de Tuberia</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Empresa</h4>
+                <ul class="footer-links">
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="Templates/formwork.html">Trabaja con Nosotros</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="Templates/politicas.html">Políticas de Privacidad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Contacto</h4>
+                <ul class="footer-contact">
+                    <li><i class="fa-solid fa-location-dot"></i> <span>Madrid Cund. Yopal, Orito</span></li>
+                    <li><i class="fa-solid fa-phone"></i> <span>+57 314 821 0883</span></li>
+                    <li><i class="fa-solid fa-envelope"></i> <span>sjfs@fullservices.com.co</span></li>
+                </ul>
             </div>
         </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 <strong>S&J Full Services S.A.S</strong>. Todos los derechos reservados.</p>
+            <p class="developer-credit">Diseñado y desarrollado por <a href="https://www.tedrix.co" target="_blank" rel="noopener">Tedrix</a></p>
+        </div>
+    </div>
     </footer>
 
     <script src="Static/Js/hero.js"></script>
     <script src="Static/Js/darkmode.js"></script>
-    <script src="Static/Js/flip.js"></script>
     <script src="Static/Js/menu.js"></script>
     <script src="Static/Js/header.js"></script>
     <script src="Static/Js/contador.js"></script>
     <script src="Static/Js/scroll.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="Static/Js/form.js"></script>
     <script src="Static/Js/smooth.js"></script>
     <script src="Static/Js/carrusel.js"></script>
     <script src="Static/Js/about.js"></script>
@@ -883,6 +788,8 @@
     <script src="Static/Js/backToTop.js"></script>
     <script src="Static/Js/scripts.js"></script>
     <script src="Static/Js/partners.js"></script>
-
+    <script src="Static/Js/whatsapp.js"></script>
+    <script src="Static/Js/map.js"></script>
+    <script src="Static/Js/preloader.js"></script>
 </body>
 </html>

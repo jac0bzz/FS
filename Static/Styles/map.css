@@ -1,0 +1,193 @@
+
+/* Contenedor padre / Fondo de toda la sección */
+.presence-section-elite {
+    background-color: #f4f6f8; /* 👈 Color de fondo de la sección (puedes cambiarlo aquí) */
+    padding: 5rem 1rem 6rem;    /* Espaciado superior e inferior para que respire */
+    position: relative;
+    width: 100%;
+}
+
+/* El contenedor principal actúa como un monitor gigante */
+.elite-map-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Altura imponente */
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--color-border, rgba(0,0,0,0.1));
+}
+
+/* --- CAPA 1: MAPAS --- */
+.map-layer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+.map-iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+    filter: grayscale(100%) brightness(0.6) contrast(1.2);
+    transition: opacity 0.8s ease, visibility 0.8s ease, filter 0.5s ease;
+}
+
+.map-iframe.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.elite-map-container:hover .map-iframe.active {
+    filter: grayscale(80%) brightness(0.8) contrast(1.1);
+}
+
+/* --- CAPA 2: PANEL DE CRISTAL ROJO FLOTANTE --- */
+.floating-glass-panel {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 380px;
+    /* Efecto Cristal Rojo Corporativo */
+    background: linear-gradient(135deg, rgba(200, 0, 0, 0.85) 0%, rgba(149, 0, 0, 0.65) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    padding: 2.5rem;
+    color: #fff;
+    box-shadow: 0 15px 40px rgba(200, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.glass-title {
+    font-family: var(--font-heading, sans-serif);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+}
+
+.glass-title i {
+    color: #ffffff;
+}
+
+.glass-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+}
+
+.glass-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.glass-stat i {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+}
+
+.glass-val {
+    font-family: var(--font-heading, sans-serif);
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.glass-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85); 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- CAPA 3: CONTROLES FLOTANTES --- */
+.floating-controls {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10;
+}
+
+.glass-btn {
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 700;
+    font-family: var(--font-body, sans-serif);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.glass-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.glass-btn.active {
+    background: var(--color-primary, #e63946);
+    box-shadow: 0 4px 15px rgba(200, 0, 0, 0.4);
+}
+
+/* --- RESPONSIVE MÓVIL --- */
+@media (max-width: 900px) {
+    .presence-section-elite {
+        padding: 3rem 1rem 4rem;
+    }
+    
+    .elite-map-container {
+        height: 750px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .floating-glass-panel {
+        position: relative;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        border-radius: 24px 24px 0 0;
+        border: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .floating-controls {
+        bottom: 20px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    .glass-btn { 
+        padding: 0.8rem 1rem; 
+        flex: 1; 
+    }
+}

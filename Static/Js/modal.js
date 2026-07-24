@@ -1,5 +1,5 @@
 const BASE_URL = window.location.origin.includes("github.io")
-    ? "https://jforero-dev.github.io/FULL-SERVICES/"
+    ? "https://jac0bzz.github.io/FS/"
     : "";
 
 const modal = document.getElementById('serviceModal');

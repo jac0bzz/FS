@@ -1,0 +1,212 @@
+
+/*HEADER*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* Efecto cristal sutil: fondo casi blanco con desenfoque */
+    background-color: rgba(255, 255, 255, 0.95); 
+    backdrop-filter: blur(10px); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); 
+    background-color: var(--color-background);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0; /* Más espacio para respirar */
+}
+
+/* === LOGO === */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Error corregido aquí */
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+.logo-img, 
+.logo-img-dark {
+    width: 260px; /* Tamaño un poco más refinado */
+    height: auto;
+    object-fit: contain;
+}
+
+.logo-img-dark {
+    display: none;
+}
+
+/* === LINKS DE NAVEGACIÓN === */
+.nav-list {
+    display: flex;
+    gap: 2rem; /* Más espacio entre opciones */
+    list-style: none;
+}
+
+.nav-link {
+    position: relative;
+    font-weight: 600;
+    color: var(--color-text);
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Efecto de línea animada al pasar el mouse (Súper premium) */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* === ACCIONES DERECHAS === */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Modo Oscuro / Claro */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--color-text-secondary);
+}
+
+.theme-toggle:hover {
+    color: var(--color-primary);
+    transform: rotate(15deg); /* Interacción sutil y agradable */
+}
+
+.sun-icon { display: none; }
+.moon-icon { display: block; }
+
+/* Botón de Traducción */
+.translate-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.translate-btn:hover {
+    background: var(--color-surface);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.translate-btn i {
+    font-size: 1rem;
+}
+
+/* Botón de Login (Llamado a la Acción) */
+.btn-login {
+    background-color: var(--color-primary);
+    color: #fff;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(200, 0, 0, 0.2); /* Sombra elegante */
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px); /* El botón se eleva un poco */
+    box-shadow: 0 6px 15px rgba(200, 0, 0, 0.3);
+}
+
+.btn-login:active {
+    transform: translateY(0); /* Efecto de "clic" real */
+}
+
+.btn-login-desktop {
+    display: inline-block;
+}
+
+.nav-login-mobile {
+    display: none;
+}
+
+/* === MENÚ HAMBURGUESA (MÓVILES) === */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background-color: var(--color-text);
+    border-radius: 4px;
+    transition: all 0.4s ease;
+}
+
+.hamburger:hover span {
+    background-color: var(--color-primary);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
