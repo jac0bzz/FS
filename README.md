@@ -14,7 +14,7 @@
 
 ---
 
-<h1 align="center">Bienvenido a Full Services S.A.S 🚀</h1>
+<h1 align="center">Bienvenido a Full Services</h1>
 
 <p align="center">
   <em>Servicios de workover ejecutados por personal calificado y bajo procedimientos técnicos que garantizan confiabilidad y desempeño operativo.</em>
