@@ -1,0 +1,185 @@
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --color-bg: #f5f7fa; /* Fondo gris muy clarito para la página */
+    --color-white: #ffffff; /* Fondo blanco para la tarjeta */
+    --color-text: #2d3436; /* Texto oscuro para que resalte */
+    --color-accent: #c80000; /* Tu rojo corporativo */
+    --border-color: #dcdde1; /* Bordes suaves para los inputs */
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Ocultamos la imagen de fondo que lo ponía todo rojo */
+.bg-overlay {
+    display: none;
+}
+
+.pqrs-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 130px auto 80px auto; 
+    padding: 0 1rem;
+    flex: 1; 
+}
+
+.pqrs-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.pqrs-title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1a1a1a !important; /* El !important fuerza a que sea oscuro */
+}
+
+.pqrs-subtitle {
+    font-size: 0.85rem;
+    color: var(--color-accent) !important; /* El !important fuerza tu rojo corporativo */
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   TARJETA BLANCA (Estilo Limpio)
+   ========================================================= */
+.pqrs-card {
+    background: var(--color-white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06); /* Sombra muy suave */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+label i {
+    color: var(--color-accent);
+    margin-right: 5px;
+}
+
+/* Estilos de los campos de texto en modo claro */
+input, select, textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: #f8f9fa; /* Gris super claro para los inputs */
+    border: 1px solid var(--border-color);
+    color: var(--color-text);
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+select option {
+    background: var(--color-white);
+    color: var(--color-text);
+}
+
+/* Efecto al hacer clic en un input */
+input:focus, select:focus, textarea:focus {
+    border-color: var(--color-accent);
+    background: var(--color-white);
+    box-shadow: 0 0 0 3px rgba(200, 0, 0, 0.1); /* Resplandor rojo suave */
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    background: var(--color-accent);
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-submit:hover {
+    background: #a00000; /* Rojo un poco más oscuro al pasar el mouse */
+    box-shadow: 0 5px 15px rgba(200, 0, 0, 0.3);
+}
+
+/* =========================================================
+   MENSAJES DE FEEDBACK
+   ========================================================= */
+.form-status {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: none;
+}
+
+.form-status.success {
+    display: block;
+    color: #28a745;
+}
+
+.form-status.error {
+    display: block;
+    color: #dc3545;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 600px) {
+    .pqrs-container {
+        margin: 100px auto 40px auto; 
+    }
+    
+    .pqrs-card { 
+        padding: 1.5rem; 
+    }
+    
+    .form-row { 
+        grid-template-columns: 1fr; 
+        gap: 0; 
+    }
+    
+    .pqrs-title { 
+        font-size: 1.6rem; 
+    }
+}

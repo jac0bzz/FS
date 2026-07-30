@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Corporate Policies - Full Services</title>
 
-    <title>Políticas de Privacidad - Full Services</title>
-
-    <!-- SEO -->
-    <meta name="description" content="Full Services – Nuestras políticas reflejan el compromiso con la ética, la transparencia y la mejora continua en todas las operaciones.">
-    <meta name="robots" content="index, follow">
+    <meta name="description" content="Full Services — Our policies reflect a commitment to ethics, transparency, safety, and continuous improvement in every process of our organization.">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../static/images/FULL-LOGO.ico">
+    <link rel="icon" type="image/x-icon" href="../Static/Images/FULL-ICO.ico">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../static/styles/styles.css">
-    <link rel="stylesheet" href="../static/styles/responsive.css">
-    <link rel="stylesheet" href="../static/styles/darkmode.css">
-    <link rel="stylesheet" href="../static/styles/animations.css">
+    <link rel="stylesheet" href="../Static/Styles/styles.css">
+    <link rel="stylesheet" href="../Static/Styles/responsive.css">
+    <link rel="stylesheet" href="../Static/Styles/darkmode.css">
+    <link rel="stylesheet" href="../Static/Styles/animations.css">
     <link rel="stylesheet" href="../Static/Styles/navbar.css">
     <link rel="stylesheet" href="../Static/Styles/footer.css">
-    <link rel="stylesheet" href="../Static/Styles/styles.css">
+    <link rel="stylesheet" href="../Static/Styles/politicas.css">
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +28,7 @@
 </head>
 
 <body>
+    <!-- PRELOADER -->
     <div id="site-preloader" class="preloader">
         <div class="preloader-content">
             <div class="logo-loader-wrapper">
@@ -50,12 +49,13 @@
             </div>
         </div>
     </div>
+
     <!-- HEADER -->
     <header class="header" id="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="#inicio">
+                    <a href="../index.html#inicio">
                         <img class="logo-img" src="../Static/Images/FULL-LOGO-H.png" alt="Logo Full Services SAS">
                         <img class="logo-img-dark" src="../Static/Images/logo prueba.png" alt="Logo Full Services SAS">
                     </a>
@@ -63,25 +63,25 @@
                 
                 <nav class="nav" id="nav">
                     <ul class="nav-list">
-                        <li><a href="../enIndex.html" class="nav-link"><span>Home</span></a></li>
-                        <li><a href="../enIndex.html#nosotros" class="nav-link"><span>About Us</span></a></li>
-                        <li><a href="../enIndex.html#servicios" class="nav-link"><span>Services</span></a></li>
-                        <li><a href="../enIndex.html#contacto" class="nav-link"><span>Contact</span></a></li>
-                        <li><a href="../enBlog.html" class="nav-link"><span>Blog</span></a></li>
+                        <li><a href="../index.html" class="nav-link"><span>Home</span></a></li>
+                        <li><a href="../index.html#nosotros" class="nav-link"><span>About Us</span></a></li>
+                        <li><a href="../index.html#servicios" class="nav-link"><span>Services</span></a></li>
+                        <li><a href="../index.html#contacto" class="nav-link"><span>Contact</span></a></li>
+                        <li><a href="../blog.html" class="nav-link"><span>Blog</span></a></li>
 
                         <li class="nav-login-mobile">
-                            <a href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=10fa57ef-4895-4ab2-872c-8c3613d4f7fb&redirect_uri=https%3A%2F%2Fwww.microsoft.com%2Fcascadeauth%2Faccount%2Fsignin-oidc&response_type=code&prompt=login&scope=openid%20profile%20offline_access&code_challenge=1YdYcMgD-KsQtfvXJJ9lDfdO1nOlA6DCDR5K-V6GJ5E&code_challenge_method=S256&response_mode=form_post&nonce=638961383103203040.NDZlYmRmNjUtNTlhMS00ODYxLThlYjAtZjg2OGY5NDQ1NzhkNDkwYzJiOWUtNDE0YS00NGQ2LWI2ODQtZjVmMDhlYmI5ZjI2&client_info=1&x-client-brkrver=IDWeb.3.9.2.0&lc=9226&claims=%7B%22compact%22%3A%7B%22name%22%3A%7B%22essential%22%3Atrue%7D%7D%7D&state=CfDJ8LpX7AEm64lJqvovzonWFb4sN8kdpbXK5t26RPsQ1gd0ql-TqVH4wrwYosSA47tqTjXg7rkw7fjCU8kKpx1e-HGLi3d_TIxUAR_I7LRAX1q3mmz6S-sH1gBMK46nff6z8UUzYezbp5wnfr1kRgDBJ82eCasZaEz3FrW8ak1Kr4hedaQney8tk1oJCBj2MpCi-90fLtiFLswvZUUkVVM-9ZaUwmfBczurckmwUu0CJPqQoi-xOEE_j6WwF7xLgbTyixHFaT6hx43GNW7oNIAIK2oMLdAAIB-kpVYEKrcz9PwIek6S8pNkLx2GPHUUyPfV_jHJdPNJVxqzblslmbVUMMxzJ8zaS4lRndd_vUpoH0WO9TADsrRBAUMHy7Xz2JPq7w79foOgfEK-YKG9D2q0WPi-OLWoXWmejGnDSwq4Ait3h9wGm600oZjZjAtC-J_r3MjQub7vn0G3TFo8te3DE5MqYwUjr-TcZtDTCYSxzuZyw6QgvkwtXNzbwbFzZTJklsxJQ1OVWPkhRE4OBKZw0tAjg6SO27G_EvlS3SfLmphqGcYGxMOfej9q-y8Z6cdvIuXxocqVtSaLr-L8uNjUsDzVHlCs23WLL6oBEnzL93r6&x-client-SKU=ID_NET6_0&x-client-ver=8.11.0.0&sso_reload=true" class="btn-login">Log In</a>
+                            <a href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=10fa57ef-4895-4ab2-872c-8c3613d4f7fb&redirect_uri=https%3A%2F%2Fwww.microsoft.com%2Fcascadeauth%2Faccount%2Fsignin-oidc&response_type=code&prompt=login&scope=openid%20profile%20offline_access&code_challenge=1YdYcMgD-KsQtfvXJJ9lDfdO1nOlA6DCDR5K-V6GJ5E&code_challenge_method=S256&response_mode=form_post&nonce=638961383103203040.NDZlYmRmNjUtNTlhMS00ODYxLThlYjAtZjg2OGY5NDQ1NzhkNDkwYzJiOWUtNDE0YS00NGQ2LWI2ODQtZjVmMDhlYmI5ZjI2&client_info=1&x-client-brkrver=IDWeb.3.9.2.0&lc=9226&claims=%7B%22compact%22%3A%7B%22name%22%3A%7B%22essential%22%3Atrue%7D%7D%7D&state=CfDJ8LpX7AEm64lJqvovzonWFb4sN8kdpbXK5t26RPsQ1gd0ql-TqVH4wrwYosSA47tqTjXg7rkw7fjCU8kKpx1e-HGLi3d_TIxUAR_I7LRAX1q3mmz6S-sH1gBMK46nff6z8UUzYezbp5wnfr1kRgDBJ82eCasZaEz3FrW8ak1Kr4hedaQney8tk1oJCBj2MpCi-90fLtiFLswvZUUkVVM-9ZaUwmfBczurckmwUu0CJPqQoi-xOEE_j6WwF7xLgbTyixHFaT6hx43GNW7oNIAIK2oMLdAAIB-kpVYEKrcz9PwIek6S8pNkLx2GPHUUyPfV_jHJdPNJVxqzblslmbVUMMxzJ8zaS4lRndd_vUpoH0WO9TADsrRBAUMHy7Xz2JPq7w79foOgfEK-YKG9D2q0WPi-OLWoXWmejGnDSwq4Ait3h9wGm600oZjZjAtC-J_r3MjQub7vn0G3TFo8te3DE5MqYwUjr-TcZtDTCYSxzuZyw6QgvkwtXNzbwbFzZTJklsxJQ1OVWPkhRE4OBKZw0tAjg6SO27G_EvlS3SfLmphqGcYGxMOfej9q-y8Z6cdvIuXxocqVtSaLr-L8uNjUsDzVHlCs23WLL6oBEnzL93r6&x-client-SKU=ID_NET6_0&x-client-ver=8.11.0.0&sso_reload=true" class="btn-login">Sign In</a>
                         </li>
                     </ul>
                 </nav>
 
                 <div class="header-actions">
-                    <a href="../Templates/politicas.html" class="translate-btn" aria-label="Traducir">
+                    <a href="../Templates/politicas.html" class="translate-btn" aria-label="Translate to Spanish">
                         <i class="fa-solid fa-globe"></i>
                         <span>EN</span>
                     </a>
 
-                    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                         <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="5"></circle>
                             <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -100,7 +100,7 @@
                     
                     <a href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=10fa57ef-4895-4ab2-872c-8c3613d4f7fb&redirect_uri=https%3A%2F%2Fwww.microsoft.com%2Fcascadeauth%2Faccount%2Fsignin-oidc&response_type=code&prompt=login&scope=openid%20profile%20offline_access&code_challenge=1YdYcMgD-KsQtfvXJJ9lDfdO1nOlA6DCDR5K-V6GJ5E&code_challenge_method=S256&response_mode=form_post&nonce=638961383103203040.NDZlYmRmNjUtNTlhMS00ODYxLThlYjAtZjg2OGY5NDQ1NzhkNDkwYzJiOWUtNDE0YS00NGQ2LWI2ODQtZjVmMDhlYmI5ZjI2&client_info=1&x-client-brkrver=IDWeb.3.9.2.0&lc=9226&claims=%7B%22compact%22%3A%7B%22name%22%3A%7B%22essential%22%3Atrue%7D%7D%7D&state=CfDJ8LpX7AEm64lJqvovzonWFb4sN8kdpbXK5t26RPsQ1gd0ql-TqVH4wrwYosSA47tqTjXg7rkw7fjCU8kKpx1e-HGLi3d_TIxUAR_I7LRAX1q3mmz6S-sH1gBMK46nff6z8UUzYezbp5wnfr1kRgDBJ82eCasZaEz3FrW8ak1Kr4hedaQney8tk1oJCBj2MpCi-90fLtiFLswvZUUkVVM-9ZaUwmfBczurckmwUu0CJPqQoi-xOEE_j6WwF7xLgbTyixHFaT6hx43GNW7oNIAIK2oMLdAAIB-kpVYEKrcz9PwIek6S8pNkLx2GPHUUyPfV_jHJdPNJVxqzblslmbVUMMxzJ8zaS4lRndd_vUpoH0WO9TADsrRBAUMHy7Xz2JPq7w79foOgfEK-YKG9D2q0WPi-OLWoXWmejGnDSwq4Ait3h9wGm600oZjZjAtC-J_r3MjQub7vn0G3TFo8te3DE5MqYwUjr-TcZtDTCYSxzuZyw6QgvkwtXNzbwbFzZTJklsxJQ1OVWPkhRE4OBKZw0tAjg6SO27G_EvlS3SfLmphqGcYGxMOfej9q-y8Z6cdvIuXxocqVtSaLr-L8uNjUsDzVHlCs23WLL6oBEnzL93r6&x-client-SKU=ID_NET6_0&x-client-ver=8.11.0.0&sso_reload=true" class="btn-login btn-login-desktop"><i class="fa-solid fa-user"></i></a>
 
-                    <button class="hamburger" id="hamburger" aria-label="Menú">
+                    <button class="hamburger" id="hamburger" aria-label="Menu">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -110,87 +110,273 @@
         </div>
     </header>
 
+    <!-- SECTION POLICIES WITH CATEGORIES (TABS) -->
     <section class="politica">
         <div class="contenedor-politica">
-        <h2 id="inicio">Privacy Policy and Personal Data Protection</h2>
-        
-        <article class="politica-contenido">
-            <h3>1. Introduction</h3>
-            <p>In accordance with Article 15 of the Political Constitution of Colombia, which states: "All persons have the right to personal and family privacy and to their good name, and the State must respect and enforce these rights. Similarly, they have the right to know, update, and rectify the information that has been collected about them in databases and archives of public and private entities. The collection, processing, and circulation of data shall respect the freedom and other guarantees enshrined in the Constitution."
-            <br>
-            In accordance with the provisions of Law 1581 of 2012, regulated by Decree 1377 of 2015, Decree 1074 of 2015, supplemented by Decree 255 of 2022, S&J FULL SERVICES S.A.S., identified with Tax ID No. 814000064-4, whose main address is in the Municipality of Orito – Putumayo, in an effort to guarantee and protect the fundamental rights of workers and, in general, of the different people who provide personal data to the company, adopts this personal data policy, which is regulated by the aforementioned regulations and other related regulations that govern the matter.</p>
+            <h2 id="inicio">Corporate Policies</h2>
+            <p class="politica-intro">Our policies reflect a commitment to ethics, transparency, safety, and continuous improvement.</p>
 
-            <h3>2. Objective</h3>
-            <p>The main purpose of this policy is to inform individuals in general of their fundamental right to have personal information provided to S&J FULL SERVICES S.A.S. processed in accordance with the guidelines established in current regulations.
-            <br>
-            In addition, inform data subjects of the guidelines established by the company for the collection, storage, use, circulation, deletion, and rectification of information held by the company.</p>
+            <!-- Category Menu (Tab Buttons) -->
+            <div class="politicas-tabs">
+                <button class="tab-btn active" data-tab="tab-privacidad">
+                    <i class="fa-solid fa-user-shield"></i> Data Protection
+                </button>
 
-            <h3>3. Responsible for the processing of personal data</h3>
-            <p>S&J FULL SERVICES S.A.S., identified with Tax ID No. 814000064-4, whose main address is KM 0.7 ZONA INDUSTRIAL VIA ECOPETROL Municipality of Orito – Putumayo, email: sjfs@sjfs.com.co.
-            <br>
-            Therefore, S&J FULL SERVICES S.A.S., as the entity responsible for processing personal data, delegates the processing of personal data to the Quality department, which will be responsible for complying with this policy. It will also be responsible for handling complaints, claims, inquiries, and reports submitted by data subjects and/or those who are entitled to do so, in accordance with the provisions of Law 1581 of 2012.</p>
+                <button class="tab-btn" data-tab="tab-hseq">
+                    <i class="fa-solid fa-hard-hat"></i> HSEQ Policy
+                </button>
 
-            <h3>4. Definition of keywords</h3>
-            <p>In developing this policy, the key concepts listed below will be used and should be interpreted in accordance with the definitions of Law 1581 of 2012, transcribed here:</p>
-            <ul>
-                <li><strong>Authorization:</strong> Prior, express, and informed consent of the Data Subject to carry out the Processing of personal data.</li>
-                <li><strong>Personal data:</strong> Any information linked or that may be associated with one or more specific or identifiable individuals..</li>
-                <li><strong>Habeas Data:</strong> Fundamental right that stipulates that all persons have the right to personal privacy, to a good reputation, and to know, update, and rectify the information that has been collected about them in different databases and in the files of public and private entities (Ruling T – 238 of 2018)..</li>
-                <li><strong>Data Controller:</strong> Natural or legal person, public or private, who, alone or in association with others, decides on the basis of the data and/or the processing of the data..</li>
-                <li><strong>Headline:</strong> Natural person whose personal data is subject to processing.</li>
-                <li><strong>Treatment:</strong> Any operation or set of operations performed on personal data, such as collection, storage, use, circulation, or deletion.</li>
-            </ul>
+                <button class="tab-btn" data-tab="tab-alcohol">
+                    <i class="fa-solid fa-ban-smoking"></i> Alcohol & Drugs
+                </button>
 
-            <h3>5. Sensitive data</h3>
-            <p>In accordance with the provisions of Law 1581 of 2012, sensitive data is considered to be data that affects the privacy of the owner or whose misuse may lead to discrimination. Therefore, such data may only be used by S&J FULL SERVICES S.A.S., as the entity responsible for the processing of personal data, in cases previously authorized by law or when written authorization has been obtained from the owner of the information.</p>
+                <!-- CORREGIDO: data-tab="tab-acoso" coincide con el ID del contenedor -->
+                <button class="tab-btn" data-tab="tab-acoso">
+                    <i class="fa-solid fa-ban"></i> Workplace Harassment
+                </button>
 
-            <h3>6. Rights of data subjects</h3>
-            <p>In accordance with the provisions of Article 8 of Law 1581 of 2012, the owner of personal data shall have the following rights::</p>
-            <ul>
-                <li><strong>a)</strong> To know, update, and rectify your personal data held by S&J FULL SERVICES S.A.S., as the entity responsible for processing personal data. This right may be exercised, among other things, in relation to partial, inaccurate, incomplete, fragmented, or misleading data, or data whose processing is expressly prohibited or has not been authorized.</li>
-                <li><strong>b)</strong> Request proof of the authorization granted to S&J FULL SERVICES S.A.S., as the entity responsible for the processing of personal data, except when expressly exempted as a requirement for processing.</li>
-                <li><strong>c)</strong> To be informed by S&J FULL SERVICES S.A.S., as the entity responsible for processing personal data, upon request, regarding the use that has been made of your personal data.</li>
-                <li><strong>d)</strong> File complaints with the Superintendency of Industry and Commerce for violations of the provisions of this law and other regulations that modify, add to, or supplement it.</li>
-                <li><strong>e)</strong> Revoke authorization and/or request the deletion of data when the principles, rights, and constitutional and legal guarantees are not respected in the processing. The revocation and/or deletion will proceed when the Superintendency of Industry and Commerce has determined that S&J FULL SERVICES S.A.S., as the entity responsible for the processing of personal data, has engaged in conduct contrary to this law and the Constitution.</li>
-                <li><strong>f)</strong> Access your personal data that has been processed.</li>
-            </ul>
+                <button class="tab-btn" data-tab="tab-seguridad">
+                    <i class="fa-solid fa-shield-halved"></i> Road Safety
+                </button>
+            </div>
 
-            <h3>7. Authorization of the Holder</h3>
-            <p>Prior to this, the owner of the information must provide written consent for the processing of personal data, in accordance with the provisions of Law 1581 of 2012 and regulatory decrees. <br>
-            Similarly, the owner may revoke the authorization at any time by filing a complaint; however, this will not take effect while there is a legal or contractual obligation to remain in the database.</p>
+            <!-- Content Wrapper -->
+            <div class="politicas-content-wrapper">
 
-            <h3>8. Exceptions to authorization</h3>
-            <p>The authorization referred to above shall not be required in the following cases:</p>
-            <ul>
-                <li><strong>•</strong> Information required by a public or administrative entity in the exercise of its legal functions or by court order;.</li>
-                <li><strong>•</strong> Public data.</li>
-                <li><strong>•</strong> Medical or health emergencies.</li>
-            </ul>
+                <!-- 1. Data Protection -->
+                <article class="politica-contenido tab-content active" id="tab-privacidad">
+                    <h3>Privacy & Personal Data Protection Policy</h3>
+                    
+                    <h4>1. Introduction</h4>
+                    <p>In accordance with Article 15 of the Political Constitution of Colombia, which states: "All persons have the right to their personal and family privacy and to their good name, and the State must respect them and make them respected. Similarly, they have the right to know, update, and rectify information that has been collected about them in databases and archives of public and private entities. In the collection, processing, and circulation of data, freedom and other guarantees enshrined in the Constitution shall be respected."
+                    <br>
+                    In accordance with Law 1581 of 2012, regulated by Decree 1377 of 2015, Decree 1074 of 2015, added by Decree 255 of 2022, S&J FULL SERVICES S.A.S., identified with Tax ID (NIT) 814000064-4, whose main domicile is in the Municipality of Orito – Putumayo, in its commitment to guarantee and protect the fundamental rights of employees and, in general, of the various persons who supply personal data to the company, adopts this personal data policy, regulated by the aforementioned norms and other concordant regulations governing the matter.</p>
 
-            <h3>9. Duties of the data controller</h3>
-            <p>S&J FULL SERVICES S.A.S., As the entity responsible for processing personal data, you must comply with the following duties, in accordance with the provisions of Article 17 of Law 1581 of 2012, without prejudice to the provisions of other related regulations governing this matter:</p>
-            <ul>
-                <li><strong>a)</strong> Guarantee the Data Subject, at all times, the full and effective exercise of the right of habeas data.</li>
-                <li><strong>b)</strong> Request and retain, under the conditions set forth in this policy, a copy of the respective authorization granted by the Owner.</li>
-                <li><strong>c)</strong> Properly inform the Data Subject about the purpose of the collection and the rights they have by virtue of the authorization granted.</li>
-                <li><strong>d)</strong> Keep the information under the necessary security conditions to prevent its adulteration, loss, consultation, unauthorized or fraudulent use or access.</li>
-                <li><strong>e)</strong> Update the information, taking into account any new information provided by the data subjects regarding the data previously provided to you, and take any other necessary measures to ensure that the information provided to you remains up to date.</li>
-                <li><strong>f)</strong> Correct information when it is incorrect.</li>
-                <li><strong>g)</strong> Process inquiries and complaints made in accordance with the terms set forth in this policy or, failing that, in accordance with the terms established in Law 1581 of 2012.</li>
-                <li><strong>h)</strong> Comply with the instructions and requirements issued by the Superintendency of Industry and Commerce.</li>
-            </ul>
+                    <h4>2. Objective</h4>
+                    <p>The main objective of this policy is to inform the general public of their fundamental right to have the personal information supplied to S&J FULL SERVICES S.A.S. processed in accordance with the guidelines established in current regulations.
+                    <br>
+                    Furthermore, to make known the guidelines established by the company to data subjects for the collection, storage, use, circulation, deletion, and rectification of information held under the custody of the company.</p>
 
-            <h3>10. Purpose for which the information will be used and procedures established for inquiries, complaints, and requests for deletion.</h3>
-                <h4>10.1. Purpose of the information.</h4>
-                <p>&J FULL SERVICES S.A.S. As the entity responsible for processing personal data, it will use the information provided by the owners exclusively for the purposes authorized and provided for in this Policy, especially for the fulfillment of the corporate purpose.</p>
-            </article>
+                    <h4>3. Data Controller</h4>
+                    <p>S&J FULL SERVICES S.A.S., identified with NIT 814000064-4, with principal address at KM 0.7 ZONA INDUSTRIAL VIA ECOPETROL, Municipality of Orito – Putumayo, email: sjfs@sjfs.com.co.
+                    <br>
+                    Therefore, S&J FULL SERVICES S.A.S., as data controller, delegates personal data processing to the Quality Department, which will be responsible for ensuring compliance with this policy and for handling Inquiries, Complaints, Claims, and Petitions submitted by data subjects or those authorized by law, pursuant to Law 1581 of 2012.</p>
+
+                    <h4>4. Key Definitions</h4>
+                    <p>In the development of this policy, key concepts shall be interpreted pursuant to definitions from Law 1581 of 2012, transcribed below:</p>
+                    <ul>
+                        <li><strong>Authorization:</strong> Prior, express, and informed consent of the Data Subject to carry out the Processing of personal data.</li>
+                        <li><strong>Personal Data:</strong> Any information linked or that can be associated with one or more specific or determinable natural persons.</li>
+                        <li><strong>Habeas Data:</strong> Fundamental right providing that all persons have the right to personal privacy, good name, and to know, update, and rectify information collected about them in databases and archives of public/private entities (Sentence T - 238 of 2018).</li>
+                        <li><strong>Data Controller:</strong> Natural or legal person, public or private, that by itself or in association with others, decides on the database and/or the Processing of data.</li>
+                        <li><strong>Data Subject:</strong> Natural person whose personal data is subject to Processing.</li>
+                        <li><strong>Processing:</strong> Any operation or set of operations on personal data, such as collection, storage, use, circulation, or deletion.</li>
+                    </ul>
+
+                    <h4>5. Sensitive Data</h4>
+                    <p>Pursuant to Law 1581 of 2012, sensitive data is that which affects the privacy of the Data Subject or whose misuse may generate discrimination. Thus, these data may only be processed by S&J FULL SERVICES S.A.S. when authorized by law or with explicit written consent from the Data Subject.</p>
+
+                    <h4>6. Rights of Data Subjects</h4>
+                    <p>Pursuant to Article 8 of Law 1581 of 2012, the Data Subject shall have the following rights:</p>
+                    <ul>
+                        <li><strong>a)</strong> Know, update, and rectify their personal data before S&J FULL SERVICES S.A.S. This right may be exercised against partial, inaccurate, incomplete, fragmented data, or data whose processing is prohibited/unauthorized.</li>
+                        <li><strong>b)</strong> Request proof of the Authorization granted to S&J FULL SERVICES S.A.S., except when explicitly exempted by law.</li>
+                        <li><strong>c)</strong> Be informed by S&J FULL SERVICES S.A.S., upon request, regarding the use given to their personal data.</li>
+                        <li><strong>d)</strong> Submit complaints to the Superintendency of Industry and Commerce for violations of current data protection laws.</li>
+                        <li><strong>e)</strong> Revoke authorization and/or request data deletion when constitutional and legal principles are not respected in the Processing.</li>
+                        <li><strong>f)</strong> Access personal data that has been subject to Processing.</li>
+                    </ul>
+
+                    <h4>7. Authorization of the Data Subject</h4>
+                    <p>Prior written consent must be supplied by the Data Subject for personal data processing. The Data Subject may revoke authorization at any time via a claim, provided there is no legal or contractual duty to remain in the database.</p>
+
+                    <h4>8. Exceptions to Authorization</h4>
+                    <p>Authorization is not required in the following cases:</p>
+                    <ul>
+                        <li><strong>•</strong> Information required by a public/administrative entity in exercise of legal duties or by court order.</li>
+                        <li><strong>•</strong> Data of a public nature.</li>
+                        <li><strong>•</strong> Medical or health emergency cases.</li>
+                    </ul>
+
+                    <h4>9. Duties of the Controller</h4>
+                    <p>S&J FULL SERVICES S.A.S. shall comply with the duties established in Article 17 of Law 1581 of 2012, including guaranteeing full habeas data rights, conserving proof of authorizations, storing data under security protocols, and updating/rectifying information timely.</p>
+
+                    <h4>10. Purpose of the Information</h4>
+                    <p>S&J FULL SERVICES S.A.S., as data controller, shall use information exclusively for authorized purposes aligned with its corporate purpose.</p>
+                </article>
+
+                <!-- 2. HSEQ -->
+                <article class="politica-contenido tab-content" id="tab-hseq">
+                    <h3>INTEGRATED HSEQ MANAGEMENT POLICY</h3>
+
+                    <p>
+                        <strong>S&J FULL SERVICES S.A.S</strong> as a company providing Engineering Services, Onshore Freight Transport, and WorkOver for the Oil and Gas sector, is committed from Senior Management to the promotion and protection of safety, occupational health, and well-being of all our collaborators, process quality, respect for the environment, and promotion of corporate social responsibility.
+                    </p>
+
+                    <h4>Senior Management Guidelines</h4>
+                    <p>From senior management, the following guidelines are established applicable to employees, suppliers, contractors, and other stakeholders:</p>
+
+                    <ul>
+                        <li>Comply with legal, regulatory, and other requirements subscribed by the Organization in Quality, Occupational Health and Safety, Environment, and Corporate Social Responsibility.</li>
+                        <li>Maintain and continuously improve the standards and requirements of the Integrated HSEQ Management System.</li>
+                        <li>Allocate and support the economic, physical, and technological resources required to fulfill objectives, targets, and proposed activities for the Integrated HSEQ Management System.</li>
+                        <li>Actively contribute to a work environment that promotes professional growth, health, and well-being of all stakeholders through transparent communication and commitment to corporate values.</li>
+                    </ul>
+
+                    <h4>Priority Objectives</h4>
+                    <p>To achieve these guidelines, the following priority objectives are established:</p>
+
+                    <ol style="padding-left: 1.2rem; margin-bottom: 1.5rem; color: var(--color-text-secondary, #4a5568); line-height: 1.8; font-size: 0.975rem;">
+                        <li style="margin-bottom: 0.75rem;">Seek increased satisfaction in meeting requirements of interested parties such as clients, suppliers, subcontractors, communities, workers, and shareholders.</li>
+                        <li style="margin-bottom: 0.75rem;">Maintain and continuously improve the Integrated HSEQ Management System, ensuring resource availability to achieve its effectiveness.</li>
+                        <li style="margin-bottom: 0.75rem;">Identify hazards, evaluate and assess occupational health and safety risks, establishing respective controls to minimize risks.</li>
+                        <li style="margin-bottom: 0.75rem;">Promote quality of working life under safe working conditions, strengthening healthy lifestyles focused on preventing work incidents/accidents, property damage, personal injuries, health deterioration, and occupational diseases.</li>
+                        <li style="margin-bottom: 0.75rem;">Promote the preservation, protection, and care of the environment through optimization, sustainable use of resources, pollution prevention, and responsible waste disposal; minimizing socio-environmental impacts of our operations toward cleaner production under renewable energy parameters and climate change adaptation.</li>
+                        <li style="margin-bottom: 0.75rem;">Guarantee technical competence and professional promotion of our staff.</li>
+                        <li style="margin-bottom: 0.75rem;">Promote worker consultation and participation in the Integrated HSEQ Management System.</li>
+                        <li style="margin-bottom: 0.75rem;">Strengthen safety culture knowledge, generating well-being for workers and extending it to their family unit and community.</li>
+                        <li style="margin-bottom: 0.75rem;">Foster corporate social responsibility with employees, families, and community, seeking well-being, healthy coexistence, and contribution to human rights protection.</li>
+                    </ol>
+                </article>
+
+                <!-- 3. Alcohol and Drugs -->
+                <article class="politica-contenido tab-content" id="tab-alcohol">
+                    <h3>NO ALCOHOL, TOBACCO, AND PSYCHOACTIVE SUBSTANCES POLICY</h3>
+                    <p>
+                        <strong>S&J FULL SERVICES S.A.S</strong>, led by General Management and aimed at fostering well-being, maintaining a healthy and safe environment for all employees, committed to the company's image and quality, supported by Resolution 2400/79 Ch. III Art. 3 literal f, Decree 1295/94 Ch. X Art. 91 literal b; determines that under no circumstances is working under the influence of Alcohol or Hallucinogenic Drugs allowed, as it poses a high risk to self-health, coworkers, people, and physical plant.
+                    </p>
+
+                    <p>
+                        At <strong>S&J FULL SERVICES S.A.S</strong>, consumption, possession, and/or sale of intoxicating beverages, tobacco, and hallucinogenic drugs at workplace or working under their effects is strictly prohibited.
+                    </p>
+
+                    <h4>Control Measures, Testing, and Sanctions</h4>
+                    <p>
+                        Failure to comply with this Policy leads to application of Internal Work Regulations provisions, with full authority to remove the employee from facilities to avoid unsafe acts, incidents, or accidents.
+                    </p>
+
+                    <p>
+                        The company reserves the right to conduct random, unannounced testing for alcohol and drugs on employees, following the signed <strong>AUTHORIZATION AND INFORMED CONSENT FOR ALCOHOL AND PSYCHOACTIVE SUBSTANCE TESTING</strong>.
+                    </p>
+
+                    <h4>Prevention and Awareness Strategies</h4>
+                    <ul>
+                        <li>Conduct awareness and education sessions on preventing consumption of alcohol, tobacco, electronic nicotine delivery systems (ENDS), non-nicotine delivery systems (ENNDS), and psychoactive substances (PAS).</li>
+                        <li>Disseminate physical, social, economic, and psychological effects of substance consumption to all workers.</li>
+                        <li>Design and implement promotion and prevention actions to decrease workplace risk factors.</li>
+                    </ul>
+
+                    <h4>Additional Guidelines</h4>
+                    <ul>
+                        <li><strong>Reporting Violations:</strong> Employees are encouraged to report any suspected violation to their immediate supervisor or HR Department confidentially without retaliation.</li>
+                        <li><strong>Support Resources:</strong> The company will provide information on employee assistance programs and external addiction resources.</li>
+                        <li><strong>Prescription Medications:</strong> Employees taking prescribed medications affecting safe job performance must inform their supervisor.</li>
+                    </ul>
+                </article>
+
+                <!-- 4. Workplace Harassment -->
+                <article class="politica-contenido tab-content" id="tab-acoso">
+                    <h3>WORKPLACE HARASSMENT PREVENTION AND CONTROL POLICY</h3>
+                    <p>
+                        <strong>S&J FULL SERVICES S.A.S</strong> is a company committed to complying with all laws, decrees, resolutions, and other regulations issued to promote a healthy, safe, and appropriate work environment for its workers, as well as those aimed at regulating the approach to gender-based violence, workplace and sexual harassment, or acts of discrimination[cite: 3]. The Company has the firm purpose of implementing, driving, and executing all actions aimed at its prevention within its scope[cite: 3].
+                    </p>
+
+                    <p>
+                        For the company, it is a priority to promote courteous, respectful, and dignified treatment of all people, carrying out activities aimed at generating collective awareness and creating and maintaining a favorable workplace environment under fair and impartial conditions for the development of daily tasks, seeking at the same time to foster workers' self-fulfillment[cite: 3].
+                    </p>
+
+                    <p>
+                        Therefore, conscious of the importance of establishing mechanisms to prevent conduct involving gender-based violence, workplace and sexual harassment, or discrimination, <strong>S&J FULL SERVICES S.A.S</strong> maintains a <strong>Workplace Coexistence Committee</strong> with the active participation of employees, fulfilling Resolution 2646 of 2008, Ministry of Social Protection Art. 14 items 9 and 1.7, and Resolutions 652 and 1356 of 2012[cite: 3]; this committee will provide the necessary tools to protect employees against psychosocial risks affecting their health or dignity and will be guided by the procedures in the company's internal regulations[cite: 3].
+                    </p>
+
+                    <p>
+                        All workers and other stakeholders have the right to work in an environment free from all forms of discrimination and behaviors that may be considered harassment, coercion, or disturbance[cite: 3]. Therefore, <strong>S&J FULL SERVICES S.A.S</strong> commits to providing the means to promote mutual respect among colleagues, prevent workplace harassment in all its modalities, and defend the right of all workers to be treated with dignity; gender-based violence, workplace and sexual harassment are rejected at their core, in all modalities and forms, regardless of who the victim or offender is, or their hierarchical rank[cite: 3].
+                    </p>
+
+                    <h4>Institutional Commitments</h4>
+                    <p>In accordance with the above, S&J FULL SERVICES S.A.S commits to[cite: 3]:</p>
+                    <ol style="padding-left: 1.2rem; margin-bottom: 1.5rem; color: var(--color-text-secondary, #4a5568); line-height: 1.8; font-size: 0.975rem;">
+                        <li style="margin-bottom: 0.75rem;">Train employees on topics related to gender-based violence, workplace and sexual harassment, psychosocial risk, conflict management, communication, and interpersonal relations[cite: 3].</li>
+                        <li style="margin-bottom: 0.75rem;">Promote a healthy, safe, and appropriate work environment through techniques that exclude behaviors that could constitute workplace harassment, always striving to promote dignity and health for every collaborator in the company[cite: 3].</li>
+                        <li style="margin-bottom: 0.75rem;">Implement and monitor compliance with standards aimed at preventing any behavior implying gender-based violence, workplace and sexual harassment, safeguarding collected information, and giving timely processing to complaints regarding workplace harassment submitted to the <strong>WORKPLACE COEXISTENCE COMMITTEE</strong>[cite: 3].</li>
+                    </ol>
+
+                    <h4>Legal Framework</h4>
+                    <ul>
+                        <li>Political Constitution of Colombia[cite: 3]</li>
+                        <li>Law 1010 of 2006[cite: 3]</li>
+                        <li>Law 776 of 2002[cite: 3]</li>
+                        <li>Law 1482 of 2011[cite: 3]</li>
+                        <li>Decree 1295 of 1994[cite: 3]</li>
+                        <li>Resolution 2013 of 1986[cite: 3]</li>
+                        <li>Resolution 2646 of 2008 (Prevention)[cite: 3]</li>
+                        <li>Resolution 652 of 2012 and its amendment 1356[cite: 3]</li>
+                        <li>Circular 026 of 2023[cite: 3]</li>
+                        <li>Substantive Labor Code[cite: 3]</li>
+                        <li>Colombian Criminal Code[cite: 3]</li>
+                        <li>Internal Work Regulations[cite: 3]</li>
+                        <li>Those that modify and regulate related standards[cite: 3].</li>
+                    </ul>
+
+                    <h4>Our Values</h4>
+                    <p>Our values are founded on[cite: 3]:</p>
+                    <ul>
+                        <li>Respect[cite: 3]</li>
+                        <li>Responsibility[cite: 3]</li>
+                        <li>Safety[cite: 3]</li>
+                        <li>Commitment[cite: 3]</li>
+                        <li>Compliance[cite: 3]</li>
+                    </ul>
+
+                    <h4>Declaration of Senior Management Commitment</h4>
+                    <p>
+                        The senior management of <strong>S&J FULL SERVICES S.A.S</strong> firmly commits to preventing and managing workplace harassment, declaring that no form of harassment will be tolerated within the company[cite: 3]. Failure to observe this policy may result in the application of corresponding disciplinary measures and sanctions[cite: 3]. Any person involved in behavior constituting workplace harassment or violating this policy will be subject to investigation in accordance with applicable legal provisions, Internal Work Regulations, and internal procedures[cite: 3].
+                    </p>
+                    <p>
+                        This Policy will be published, disseminated, and updated whenever deemed relevant and will also be attached as an annex to the Company's Internal Work Regulations[cite: 3].
+                    </p>
+                </article>
+
+                <!-- 5. Road Safety -->
+                <article class="politica-contenido tab-content" id="tab-seguridad">
+                    <h3>ROAD SAFETY POLICY</h3>
+                    <p>
+                        <strong>S&J FULL SERVICES S.A.S</strong>, providing Engineering, Freight Transport, and WorkOver services, commits to protecting life on the roads and allocating physical, technological, financial, and human resources for the Strategic Road Safety Plan (PESV).
+                    </p>
+
+                    <h4>Senior Management Commitments</h4>
+                    <ul>
+                        <li>Comply with National Transit Code regulations (Law 769 of 2002 and Law 1383 of 2010).</li>
+                        <li>Employ qualified personnel for vehicle operations.</li>
+                        <li>Implement training in defensive driving, adverse weather driving, first aid, and traffic sign compliance.</li>
+                        <li>Enforce strict monitoring of mission vehicles to prevent road incidents.</li>
+                        <li>Prohibit driving under fatigue, illness, or influence of alcohol/drugs/drowsy medication.</li>
+                        <li>Promote active breaks, avoiding continuous driving over 8 hours (maximum 12-hour workday).</li>
+                        <li>Prohibit smoking and mobile phone usage while driving.</li>
+                        <li>Enforce strict compliance with speed limits and permanent seatbelt usage for all occupants.</li>
+                        <li>Maintain vehicle preventive maintenance programs, regular driving license verifications, and clear incident reporting procedures.</li>
+                    </ul>
+
+                    <h4>Obligatoriness and Compliance</h4>
+                    <p>
+                        All direct collaborators and sub-contracted drivers must comply with road safety norms. Failure to comply with the Strategic Road Safety Plan will result in administrative measures under Internal Labor Regulations.
+                    </p>
+                </article>
+
+            </div>
         </div>
     </section>
 
+    <!-- FLOATING WHATSAPP -->
+    <button id="waButton" class="wa-button" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </button>
+
+    <!-- WHATSAPP MODAL -->
     <div class="wa-modal" id="waModal">
         <div class="wa-modal-header">
             Chat with us
-            <p>Do you have any questions? Our team is ready to help you..</p>
+            <p>Have questions? Our team is ready to help you.</p>
         </div>
         
         <div class="wa-modal-content">
@@ -198,7 +384,7 @@
                 <div class="wa-item" onclick="window.open('https://wa.link/94tqjk', '_blank')">
                     <i class="fa-brands fa-whatsapp wa-icon-left"></i>
                     <div class="wa-info">
-                        <h4>Rental</h4>
+                        <h4>Rentals</h4>
                         <p>Online now</p>
                     </div>
                     <i class="fa-solid fa-truck-monster"></i>
@@ -221,18 +407,12 @@
                     </div>
                     <i class="fa-solid fa-oil-well"></i>
                 </div>
-
             </div>
         </div>
     </div>
 
-    <!-- Botón Back to Top -->
-    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Botón Back to Top -->
-    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -242,76 +422,81 @@
             <div class="footer-grid">
                 
                 <div class="footer-col">
-                    <h3 class="footer-title">
-                        <div class="logo">
-                            <a href="#inicio">
-                                <img class="logo-img" src="../Static/Images/FULL-LOGO-H.png" alt="Logo Full Services SAS">
-                                <img class="logo-img-dark" src="../Static/Images/logo prueba.png" alt="Logo Full Services SAS">
-                            </a>
-                        </div>
-                    </h3>
+                    <div class="footer-brand">
+                        <a href="../index.html#inicio" class="footer-logo-link">
+                            <img class="logo-img" src="../Static/Images/FULL-LOGO-H.png" alt="Full Services SAS Logo">
+                            <img class="logo-img-dark" src="../Static/Images/logo prueba.png" alt="Full Services SAS Logo">
+                        </a>
+                    </div>
                     <p class="footer-text">
-                        Workover services performed by qualified personnel and under technical procedures that guarantee reliability and operational performance.
+                        Workover services executed by qualified personnel under technical procedures that guarantee reliability and operational performance.
                     </p>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/fullservicesingenieria/?ref=pages_you_manage" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/fullservicessas/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/full-services-sas" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://wa.link/mi5n03" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://www.youtube.com/channel/UCM24jb9IC27P_QPR2GwM6fw"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="bio.html"><i class="fa-solid fa-link"></i></a>
+                        <a href="https://www.facebook.com/fullservicesingenieria/?ref=pages_you_manage" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/fullservicessas/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/full-services-sas" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://wa.link/mi5n03" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.youtube.com/channel/UCM24jb9IC27P_QPR2GwM6fw" aria-label="YouTube" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="../bio.html" aria-label="Bio Link"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
                 
                 <div class="footer-col">
                     <h4 class="footer-heading">Services</h4>
                     <ul class="footer-links">
-                        <li><a href="../enIndex.html#servicios">Workover</a></li>
-                        <li><a href="../enIndex.html#servicios">Trailers</a></li>
-                        <li><a href="../enIndex.html#servicios">Manufacturing</a></li>
-                        <li><a href="../enIndex.html#servicios">Tubing Rental</a></li>
+                        <li><a href="../index.html#servicios">Workover</a></li>
+                        <li><a href="../index.html#servicios">Equipment Rental</a></li>
+                        <li><a href="../index.html#servicios">Maintenance</a></li>
+                        <li><a href="../index.html#servicios">Tubing Rental</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-col">    
+                <div class="footer-col">
                     <h4 class="footer-heading">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="../enIndex.html#nosotros">About Us</a></li>
-                        <li><a href="../enIndex.html#contacto">Contact</a></li>
-                        <li><a href="../Translate/enFormWork.html">Work with Us</a></li>
-                        <li><a href="../enBlog.html">Blog</a></li>
-                        <li><a href="../Translate/enPoliticas.html">Privacy Policies</a></li>
+                        <li><a href="../index.html#nosotros">About Us</a></li>
+                        <li><a href="../index.html#contacto">Contact</a></li>
+                        <li><a href="../Translate/enFormWork.html">Careers</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../Templates/politicas.html">Privacy Policy</a></li>
+                        <li><i class="fa-solid fa-exclamation"></i> <a href="PQR'S.html"> <span>PQR'S</span> </a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4 class="footer-heading">Contact</h4>
+                    <h4 class="footer-heading">Contact Us</h4>
                     <ul class="footer-contact">
                         <li><i class="fa-solid fa-location-dot"></i> Madrid Cund. Yopal, Orito</li>
                         <li><i class="fa-solid fa-phone"></i> +57 314 821 0883</li>
                         <li><i class="fa-solid fa-envelope"></i> sjfs@fullservices.com.co</li>
+                        <li><i class="fa-solid fa-exclamation"></i> <a href="PQR'S.html"> <span>PQRS</span> </a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 <strong>S&J Full Services S.A.S</strong>. All rights reserved.</p>
+                <p class="developer-credit">Designed and developed by <a href="https://www.tedrix.co" target="_blank" rel="noopener">Tedrix</a></p>
             </div>
         </div>
     </footer>
 
+
+    <!-- SCRIPTS -->
     <script src="../Static/Js/scripts.js"></script>
     <script src="../Static/Js/darkmode.js"></script>
     <script src="../Static/Js/menu.js"></script>
     <script src="../Static/Js/header.js"></script>
     <script src="../Static/Js/contador.js"></script>
     <script src="../Static/Js/scroll.js"></script>
-    <script src="../Static/Js/enForm.js"></script>
+    <script src="../Static/Js/form.js"></script>
     <script src="../Static/Js/smooth.js"></script>
     <script src="../Static/Js/carrusel.js"></script>
     <script src="../Static/Js/about.js"></script>
-    <script src="../Static/Js/enModal.js"></script>
+    <script src="../Static/Js/modal.js"></script>
     <script src="../Static/Js/partners.js"></script>
     <script src="../Static/Js/backToTop.js"></script>
     <script src="../Static/Js/preloader.js"></script>
+    <script src="../Static/Js/politicas.js"></script>
+
 </body>
 </html>

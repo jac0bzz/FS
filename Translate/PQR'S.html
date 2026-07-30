@@ -3,30 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Work with Us - Full Services</title>
-
-    <meta name="description" content="Full Services — Join a team committed to innovation, safety, and excellence in the oil, civil, and industrial sectors.">
-
-    <!-- Favicon -->
+    <title>PQRS - Full Services</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="../Static/Images/FULL-ICO.ico">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="../Static/Styles/responsive.css">
-    <link rel="stylesheet" href="../Static/Styles/darkmode.css">
-    <link rel="stylesheet" href="../Static/Styles/animations.css">
-    <link rel="stylesheet" href="../Static/Styles/workVacantes.css">
-    <link rel="stylesheet" href="../Static/Styles/navbar.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="../Static/Styles/footer.css">
     <link rel="stylesheet" href="../Static/Styles/styles.css">
+    <link rel="stylesheet" href="../Static/Styles/navbar.css">
+    <link rel="stylesheet" href="../Static/Styles/pqrs.css">
+    <link rel="stylesheet" href="../Static/Styles/darkmode.css">
 
-    <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
-
 <body>
     <div id="site-preloader" class="preloader">
         <div class="preloader-content">
@@ -48,12 +40,13 @@
             </div>
         </div>
     </div>
+
     <!-- HEADER -->
     <header class="header" id="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="../enIndex.html#inicio"">
+                    <a href="../index.html#inicio">
                         <img class="logo-img" src="../Static/Images/FULL-LOGO-H.png" alt="Full Services SAS Logo">
                         <img class="logo-img-dark" src="../Static/Images/logo prueba.png" alt="Full Services SAS Logo">
                     </a>
@@ -61,11 +54,11 @@
                 
                 <nav class="nav" id="nav">
                     <ul class="nav-list">
-                        <li><a href="enIndex.html" class="nav-link"><span>Home</span></a></li>
-                        <li><a href="enIndex.html#about" class="nav-link"><span>About Us</span></a></li>
-                        <li><a href="enIndex.html#services" class="nav-link"><span>Services</span></a></li>
-                        <li><a href="enIndex.html#contact" class="nav-link"><span>Contact</span></a></li>
-                        <li><a href="enBlog.html" class="nav-link"><span>Blog</span></a></li>
+                        <li><a href="../index.html" class="nav-link"><span>Home</span></a></li>
+                        <li><a href="../index.html#nosotros" class="nav-link"><span>About Us</span></a></li>
+                        <li><a href="../index.html#servicios" class="nav-link"><span>Services</span></a></li>
+                        <li><a href="../index.html#contacto" class="nav-link"><span>Contact</span></a></li>
+                        <li><a href="../blog.html" class="nav-link"><span>Blog</span></a></li>
 
                         <li class="nav-login-mobile">
                             <a href="#" class="btn-login">Log In</a>
@@ -74,8 +67,7 @@
                 </nav>
 
                 <div class="header-actions">
-                    <!-- Botón para volver al Español -->
-                    <a href="../Templates/formwork.html" class="translate-btn" aria-label="Translate">
+                    <a href="../Templates/PQR'S.html" class="translate-btn" aria-label="Translate to Spanish">
                         <i class="fa-solid fa-globe"></i>
                         <span>EN</span>
                     </a>
@@ -97,7 +89,7 @@
                         </svg>
                     </button>
                     
-                    <a href="#" class="btn-login btn-login-desktop"><i class="fa-solid fa-user"></i></a>
+                    <a href="#" class="btn-login btn-login-desktop" aria-label="Log In"><i class="fa-solid fa-user"></i></a>
 
                     <button class="hamburger" id="hamburger" aria-label="Menu">
                         <span></span>
@@ -108,119 +100,78 @@
             </div>
         </div>
     </header>
+    
+    <!-- Background Overlay -->
+    <div class="bg-overlay"></div>
 
-    <!-- SECCIÓN TRABAJE CON NOSOTROS -->
-    <section class="trabaje-section">
-        <div class="container">
-            <h1 class="trabaje-title" id="home">Work with Us</h1>
+    <main class="pqrs-container">
+        <!-- Form Header -->
+        <header class="pqrs-header">
+            <h1 class="pqrs-title">PQRS Form</h1>
+            <p class="pqrs-subtitle">Petitions, Complaints, Claims, and Suggestions</p>
+        </header>
 
-            <p class="trabaje-description">
-                At <strong>Full Services</strong>, we promote solid and committed work teams. We are looking for professionals with a great attitude, a focus on safety, and a willingness for personal and professional growth.
-            </p>
+        <!-- Glass Card -->
+        <div class="pqrs-card">
+            <form id="pqrsForm">
+                
+                <!-- Request Type -->
+                <div class="form-group">
+                    <label for="type"><i class="fas fa-list-check"></i> Request Type *</label>
+                    <select id="type" name="tipo_solicitud" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Petición">Petition</option>
+                        <option value="Queja">Complaint</option>
+                        <option value="Reclamo">Claim</option>
+                        <option value="Sugerencia">Suggestion</option>
+                    </select>
+                </div>
 
-            <div class="work-layout reveal">
-                <!-- Columna 1: Vacantes -->
-                <div class="vacancies-panel">
-                    <h3>Available Vacancies</h3>
-                    <ul id="vacancyList" class="vacancy-list"></ul>
-                    
-                    <!-- Paginación -->
-                    <div class="vacancy-pagination">
-                        <button id="prevPage">← </button>
-                        <span id="pageInfo">1</span>
-                        <button id="nextPage">→</button>
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Full Name *</label>
+                    <input type="text" id="name" name="nombre" placeholder="e.g. John Doe" required>
+                </div>
+
+                <!-- Email and Phone Row -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone"><i class="fas fa-phone"></i> Phone / Mobile</label>
+                        <input type="tel" id="phone" name="telefono" placeholder="+1 300 000 0000">
                     </div>
                 </div>
 
-                <!-- Columna 2: Requisitos -->
-                <div class="details-panel">
-                    <h3 id="vacancyTitle">Select a vacancy</h3>
-                    <p>At Full Services, we value excellence. Review the requirements in detail before applying for this position. If you meet the profile, use the panel on the right to contact us.</p>
-                    <ul id="vacancyRequirements" class="requirements-list">
-                        <li>Choose a vacancy from the left list to see the requirements.</li>
-                    </ul>
+                <!-- Subject -->
+                <div class="form-group">
+                    <label for="subject"><i class="fas fa-heading"></i> Subject *</label>
+                    <input type="text" id="subject" name="asunto" placeholder="Brief summary of your request" required>
                 </div>
 
-                <!-- Columna 3: WhatsApp Chat Directo -->
-                <div class="whatsapp-panel">
-                    <div class="whatsapp-mockup-wrapper">
-                        <div class="whatsapp-phone">
-                            <!-- Cabecera -->
-                            <div class="wa-header">
-                                <div class="wa-avatar">
-                                    <img src="../Static/Images/FULL-ICO.ico" alt="HR Full Services">
-                                </div>
-                                <div class="wa-info">
-                                    <h4>HR Full Services</h4>
-                                    <p>Online</p>
-                                </div>
-                                <i class="fa-brands fa-whatsapp wa-brand"></i>
-                            </div>
-                            
-                            <!-- Cuerpo del chat -->
-                            <div class="wa-chat-body">
-                                <div class="wa-date">Today</div>
-                                <div class="wa-message">
-                                    Hello! 👋 Thank you for your interest in joining the team. 
-                                    <br><br>
-                                    Select a vacancy and send us a message here attaching your <strong>Resume (PDF)</strong>.
-                                </div>
-                            </div>
-                            
-                            <!-- Área de Input simulada -->
-                            <div class="wa-input-area" onclick="abrirWhatsAppRRHH()" title="Click to send your application">
-                                <input type="text" id="waInputMessage" value="Select a vacancy..." readonly style="cursor: pointer;">
-                                <button class="wa-send-btn" type="button" aria-label="Send message">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Message / Details -->
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment-alt"></i> Request Details *</label>
+                    <textarea id="message" name="mensaje" rows="5" placeholder="Write the details of your request here..." required></textarea>
                 </div>
-            </div>
+
+                <!-- Status Message / Alerts -->
+                <div id="formStatus" class="form-status"></div>
+
+                <!-- HIDDEN TICKET NUMBER -->
+                <input type="hidden" name="ticket" id="ticketNum">
+
+                <!-- Submit Button -->
+                <button type="submit" id="btnSubmit" class="btn-submit">
+                    <span id="btnText"><i class="fas fa-paper-plane"></i> Submit Request</span>
+                </button>
+            </form>
         </div>
-    </section>
+    </main>
 
-    <!-- Botones Flotantes Generales -->
-    <button id="waButton" class="wa-button" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </button>
-
-    <div class="wa-modal" id="waModal">
-        <div class="wa-modal-header">
-            Chat with us
-            <p>Have any questions? Our team is ready to help.</p>
-        </div>
-        
-        <div class="wa-modal-content">
-            <div class="wa-list">
-                <div class="wa-item" onclick="window.open('https://wa.link/94tqjk', '_blank')">
-                    <i class="fa-brands fa-whatsapp wa-icon-left"></i>
-                    <div class="wa-info">
-                        <h4>Rentals</h4>
-                        <p>Online now</p>
-                    </div>
-                    <i class="fa-solid fa-truck-monster"></i>
-                </div>
-                <div class="wa-item" onclick="window.open('https://wa.link/mi5n03', '_blank')">
-                    <i class="fa-brands fa-whatsapp wa-icon-left"></i>
-                    <div class="wa-info">
-                        <h4>Maintenance</h4>
-                        <p>Online now</p>
-                    </div>
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -284,14 +235,9 @@
         </div>
     </footer>
 
-
-    <script src="../Static/Js/darkmode.js"></script>
-    <script src="../Static/Js/menu.js"></script>
-    <script src="../Static/Js/header.js"></script>
-    <script src="../Static/Js/scroll.js"></script>
-    <script src="../Static/Js/smooth.js"></script>
-    <script src="../Static/Js/backToTop.js"></script>
+    <!-- EmailJS and Preloader Scripts -->
+    <script src="../Static/Js/enPqrs.js"></script>
     <script src="../Static/Js/preloader.js"></script>
-    <script src="../Static/Js/enWorkVacantes.js"></script>
+    <script src="../Static/Js/darkmode.js"></script>
 </body>
 </html>

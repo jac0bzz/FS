@@ -1,0 +1,185 @@
+/* ==========================================================================
+   SECCIÓN DE POLÍTICAS CORPORATIVAS (TABS / CATEGORÍAS)
+   ========================================================================== */
+
+.politica {
+    padding: 5rem 0 4rem;
+    background-color: var(--color-bg, #ffffff);
+    min-height: 80vh;
+}
+
+.contenedor-politica {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.contenedor-politica h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-text, #1a1a1a);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.politica-intro {
+    text-align: center;
+    color: var(--color-text-secondary, #6c757d);
+    font-size: 1.05rem;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+}
+
+/* --- Navegación por Pestañas (Tabs) --- */
+.politicas-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+}
+
+.tab-btn {
+    background-color: var(--color-surface, #f8f9fa);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 0.85rem 1.4rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text-secondary, #495057);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    outline: none;
+}
+
+.tab-btn i {
+    color: var(--color-primary, #e63946);
+    font-size: 1.05rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tab-btn:hover {
+    background-color: rgba(230, 57, 70, 0.06);
+    border-color: rgba(230, 57, 70, 0.3);
+    color: var(--color-primary, #e63946);
+    transform: translateY(-2px);
+}
+
+.tab-btn:hover i {
+    transform: scale(1.15);
+}
+
+.tab-btn.active {
+    background-color: var(--color-primary, #e63946);
+    color: #ffffff;
+    border-color: var(--color-primary, #e63946);
+    box-shadow: 0 6px 18px rgba(230, 57, 70, 0.28);
+}
+
+.tab-btn.active i {
+    color: #ffffff;
+}
+
+/* --- Contenedor de Artículos --- */
+.politicas-content-wrapper {
+    background-color: var(--color-surface, #ffffff);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeInTab 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+/* --- Estilos del Contenido de Políticas --- */
+.politica-contenido h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-text, #1a1a1a);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(230, 57, 70, 0.15);
+}
+
+.politica-contenido h4 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary, #e63946);
+    margin: 1.8rem 0 0.6rem;
+}
+
+.politica-contenido p {
+    color: var(--color-text-secondary, #4a5568);
+    line-height: 1.8;
+    font-size: 0.975rem;
+    margin-bottom: 1rem;
+}
+
+.politica-contenido ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.politica-contenido ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-text-secondary, #4a5568);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.politica-contenido ul li::before {
+    content: "•";
+    color: var(--color-primary, #e63946);
+    font-weight: bold;
+    font-size: 1.4rem;
+    position: absolute;
+    left: 0.2rem;
+    top: -0.15rem;
+}
+
+/* --- Animación --- */
+@keyframes fadeInTab {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+    .politicas-tabs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tab-btn {
+        justify-content: flex-start;
+        padding: 0.9rem 1.2rem;
+    }
+
+    .politicas-content-wrapper {
+        padding: 1.5rem;
+    }
+
+    .politica-contenido h3 {
+        font-size: 1.35rem;
+    }
+}
