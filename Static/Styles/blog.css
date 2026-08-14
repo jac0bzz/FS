@@ -1,11 +1,21 @@
+/* ==========================================================================
+   1. VARIABLES GLOBALES (Unificadas y sin conflictos)
+   ========================================================================== */
 :root {
-    --primary: var(--color-primary, #c80000);
+    --primary: var(--color-primary, #c03a2b);
     --primary-hover: #a00000;
+    --dark-red: #470700;
+    --accent: #ff4d4d;
     --text-main: #2c3e50;
     --text-muted: #64748b;
     --bg-light: #f8fafc;
     --bg-card: #ffffff;
     --border-color: #e2e8f0;
+    
+    /* Variables de utilidad para sombras y transiciones */
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .blog-container {
@@ -14,75 +24,172 @@
     padding: 0 20px;
 }
 
-.blog-hero {
+/* ==========================================================================
+   2. HERO "NOSOTROS / HISTORIA" (Diseño Industrial Mejorado)
+   ========================================================================== */
+.hero-nosotros {
     position: relative;
-    background-color: var(--primary);
-    background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-        radial-gradient(circle at 50% 0%, var(--primary) 0%, #8a0000 100%);
-    background-size: 40px 40px, 40px 40px, 100% 100%;
-    color: #ffffff;
-    padding: 7.5rem 20px 6.5rem 20px;
-    text-align: center;
-    border-bottom: 5px solid #111111; 
+    background-image: url('../Images/FULL-IMG4-CARRUSEL.webp'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 1.5rem 6rem;
     overflow: hidden;
 }
 
-.blog-hero-tag {
+/* Filtro oscuro con degradado corporativo */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(35, 55, 70, 0.9), rgba(71, 7, 0, 0.85));
+    z-index: 1;
+}
+
+/* Decoraciones Petroleras de Fondo (Marca de agua) */
+.hero-decorations {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.decor-icon {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.035);
+}
+
+.rig-1 {
+    font-size: 28rem;
+    bottom: -80px;
+    right: -50px;
+    transform: rotate(-5deg);
+}
+
+.gear-1 {
+    font-size: 15rem;
+    top: 15%;
+    left: -40px;
+    animation: spinGear 30s linear infinite;
+}
+
+.drop-1 {
+    font-size: 10rem;
+    top: 25%;
+    right: 20%;
+    color: rgba(192, 58, 43, 0.1);
+    animation: floatDrop 6s ease-in-out infinite;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 900px;
+    color: #ffffff;
+    animation: fadeInUpNosotros 1s ease-out forwards;
+}
+
+.hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 6px 16px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    color: var(--primary);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
     font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-size: clamp(2.4rem, 5vw, 4rem);
     font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    letter-spacing: -1px;
+    color: #ffffff;
+}
+
+.text-accent {
+    color: #ff4d4d;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+/* Estadísticas rápidas en el Hero */
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 2.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 1.5rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #ff4d4d;
+    line-height: 1;
+}
+
+.stat-text {
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 0.3rem;
 }
 
-.blog-hero-tag::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    background-color: var(--primary);
-    border-radius: 50%;
+/* Onda inferior (Wave) */
+.hero-wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 4;
 }
 
-.blog-hero-title {
-    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-    font-weight: 900;
-    letter-spacing: -1px;
-    line-height: 1.15;
-    margin: 0 auto 1.2rem auto;
-    color: #ffffff;
-    max-width: 900px;
+.hero-wave svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 70px;
 }
 
-.blog-hero-title span {
-    color: #111111;
-}
-
-.blog-hero-subtitle {
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
-    color: rgba(255, 255, 255, 0.85); 
-    max-width: 680px;
-    margin: 0 auto;
-    line-height: 1.7;
-    font-weight: 500;
-}
-
+/* ==========================================================================
+   3. SECCIÓN SOBRE NOSOTROS & HISTORIA
+   ========================================================================== */
 .blog-about-section {
     padding: 6rem 0;
     background-color: var(--bg-card);
 }
 
 .blog-section-title {
-    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
     text-align: center;
     color: var(--text-main);
     font-weight: 800;
@@ -100,18 +207,19 @@
     align-items: center;
 }
 
-.blog-history-text p {
+/* Solución definitiva para los espacios gigantes entre palabras */
+.texto-historia {
+    text-align: left;
+    line-height: 1.8;
     color: var(--text-muted);
-    line-height: 1.7;
     font-size: 1.05rem;
     margin-bottom: 1.5rem;
-    text-align: justify;
 }
 
 .blog-history-image {
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-lg);
 }
 
 .blog-history-image img {
@@ -120,9 +228,9 @@
     display: block;
 }
 
-/* -----------------------------------------
-   VALORES: Tarjetas Minimalistas
------------------------------------------ */
+/* ==========================================================================
+   4. VALORES: Tarjetas Minimalistas
+   ========================================================================== */
 .blog-values-title {
     margin-top: 6rem;
 }
@@ -131,6 +239,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
+    margin-top: 3rem;
 }
 
 .blog-value-card {
@@ -144,7 +253,7 @@
 
 .blog-value-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--shadow-lg);
     border-color: var(--primary);
 }
 
@@ -166,12 +275,16 @@
     font-size: 0.95rem;
     line-height: 1.5;
 }
-/* Posts Section */
+
+/* ==========================================================================
+   5. SECCIÓN DE PUBLICACIONES (Posts)
+   ========================================================================== */
 .blog-posts-section {
     width: 100vw;
+    max-width: 100%;
     margin-left: 50%;
     transform: translateX(-50%);
-    background-color: var(--bg-white);
+    background-color: var(--bg-light);
     padding: 80px 0;
     position: relative;
     overflow: hidden;
@@ -185,15 +298,17 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .blog-posts-section .blog-section-title {
     font-size: 2rem;
-    color: var(--color-primary);
+    color: var(--primary);
     font-weight: 700;
+    margin-bottom: 0;
 }
 
-/* Filter Buttons */
+/* Botones de Filtro */
 .blog-filter-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -202,9 +317,9 @@
 
 .blog-filter-btn {
     padding: 0.5rem 1.25rem;
-    border: 2px solid var(--color-border);
-    background-color: #e5e5e560;
-    color: var(--color-primary);
+    border: 2px solid var(--border-color);
+    background-color: var(--bg-card);
+    color: var(--primary);
     border-radius: 20px;
     cursor: pointer;
     transition: var(--transition);
@@ -212,17 +327,17 @@
 }
 
 .blog-filter-btn:hover {
-    color: var(--color-primary);
-    border-color: var(--color-primary);
+    color: var(--primary);
+    border-color: var(--primary);
 }
 
 .blog-filter-btn.active {
-    background-color: var(--color-primary);
-    color: var(--color-background);
-    border-color: var(--color-primary);
+    background-color: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
 }
 
-/* Posts Grid */
+/* Grid de Posts */
 .blog-posts-grid {
     width: 90%;
     max-width: 1600px;
@@ -232,9 +347,10 @@
     gap: 2rem;
 }
 
-/* Post Card */
+/* Tarjeta de Post */
 .blog-post-card {
-    background-color: #e5e5e560;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     box-shadow: var(--shadow);
     overflow: hidden;
@@ -246,7 +362,6 @@
     transform: translateY(-4px);
 }
 
-/* Post Header */
 .blog-post-header {
     padding: 1rem;
     display: flex;
@@ -258,16 +373,17 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    background: linear-gradient(135deg, var(--primary), var(--accent));
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-background);
+    color: #ffffff;
 }
 
 .blog-post-info h3 {
     font-size: 1rem;
     font-weight: 600;
+    color: var(--text-main);
 }
 
 .blog-post-meta {
@@ -275,18 +391,17 @@
     align-items: center;
     gap: 0.5rem;
     font-size: 0.8rem;
-    color: var(--color-text);
+    color: var(--text-muted);
 }
 
 .blog-post-category {
-    background-color: var(--color-primary);
-    color: var(--color-background);
+    background-color: var(--primary);
+    color: #ffffff;
     padding: 0.1rem 0.6rem;
     border-radius: 10px;
     font-size: 0.7rem;
 }
 
-/* Post Carousel */
 .blog-post-carousel {
     position: relative;
     overflow: hidden;
@@ -311,8 +426,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.103);
-    color: var(--color-background);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
     border: none;
     font-size: 1.2rem;
     width: 32px;
@@ -324,42 +439,35 @@
 }
 
 .blog-carousel-btn:hover {
-    background-color: rgba(0, 0, 0, 0.425);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-.blog-carousel-btn.prev {
-    left: 10px;
-}
+.blog-carousel-btn.prev { left: 10px; }
+.blog-carousel-btn.next { right: 10px; }
 
-.blog-carousel-btn.next {
-    right: 10px;
-}
-
-/* Post Content */
 .blog-post-content {
-    padding: 1rem;
+    padding: 1.2rem;
 }
 
 .blog-post-content h4 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
-    color: var(--color-text);
+    color: var(--text-main);
     font-weight: 700;
 }
 
 .blog-post-content p {
     font-size: 0.9rem;
-    color: var(--color-text-secondary);
+    color: var(--text-muted);
     line-height: 1.5;
 }
 
-/* Load More Button */
 .blog-load-more-btn {
     display: block;
     margin: 3rem auto 0 auto;
     padding: 0.75rem 2rem;
-    background-color: var(--color-primary);
-    color: white;
+    background-color: var(--primary);
+    color: #ffffff;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
@@ -368,14 +476,13 @@
 }
 
 .blog-load-more-btn:hover {
-    background-color: var(--color-accent);
+    background-color: var(--primary-hover);
     transform: translateY(-3px);
 }
 
-
-/* -----------------------------------------
-   TRABAJA CON NOSOTROS (Llamado a la acción)
------------------------------------------ */
+/* ==========================================================================
+   6. TRABAJA CON NOSOTROS (CTA Section)
+   ========================================================================== */
 .careers-cta-section {
     padding: 6rem 0;
     background-color: var(--bg-card);
@@ -422,7 +529,7 @@
 }
 
 .perk-item i {
-    color: #10b981; /* Verde esmeralda sutil para checks */
+    color: #10b981; 
     font-size: 1.2rem;
 }
 
@@ -436,7 +543,7 @@
     border-radius: 6px;
     font-weight: 700;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: var(--transition);
 }
 
 .btn-careers:hover {
@@ -449,7 +556,7 @@
     padding: 3rem 2rem;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    box-shadow: var(--shadow);
 }
 
 .careers-card-accent i {
@@ -470,9 +577,21 @@
     line-height: 1.5;
 }
 
-/* -----------------------------------------
-   RESPONSIVO
------------------------------------------ */
+/* ==========================================================================
+   7. ANIMACIONES Y RESPONSIVIDAD
+   ========================================================================== */
+@keyframes spinGear { 
+    100% { transform: rotate(360deg); } 
+}
+@keyframes floatDrop {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+}
+@keyframes fadeInUpNosotros {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 992px) {
     .blog-history-content,
     .careers-grid {
@@ -487,6 +606,23 @@
     .blog-values-grid,
     .blog-posts-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-nosotros {
+        min-height: 50vh;
+        background-attachment: scroll;
+        padding: 7rem 1.2rem 4rem;
+    }
+
+    .rig-1 { font-size: 18rem; right: -30px; }
+    
+    .hero-stats {
+        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+        border: none;
     }
 }
 
