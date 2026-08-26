@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404 - Coordenada Inválida — S&J Full Services S.A.S</title>
+    <link rel="icon" type="image/x-icon" href="Static/Images/FULL-ICO.ico">
+    
+    <!-- Fuentes e Iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* === VARIABLES === */
+        :root {
+            --primary: #c03a2b;
+            --primary-hover: #a00000;
+            --bg-dark: #0b0d10;
+            --text-main: #ffffff;
+            --text-muted: #8b9bb4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            height: 100vh;
+            height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* === FONDO PLANO DE INGENIERÍA (GRID) === */
+        .engineering-grid {
+            position: absolute;
+            inset: 0;
+            background-size: 50px 50px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            z-index: 1;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+            -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        }
+
+        /* Luces de advertencia rotativas (simulando maquinaria) */
+        .warning-light {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(192, 58, 43, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+            z-index: 0;
+            animation: pulseLight 4s infinite alternate;
+        }
+
+        .warning-light-2 {
+            top: auto;
+            right: auto;
+            bottom: -200px;
+            left: -200px;
+            animation: pulseLight 5s infinite alternate-reverse;
+        }
+
+        /* === CONTENEDOR PRINCIPAL === */
+        .content-404 {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 700px;
+            padding: 0 2rem;
+            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .logo {
+            width: 180px;
+            margin-bottom: 2rem;
+        }
+
+        /* === EL 404 ESTILO "TUBERÍA / ESTRUCTURA" === */
+        .error-number {
+            font-size: clamp(7rem, 20vw, 12rem);
+            font-weight: 900;
+            line-height: 1;
+            margin: 0;
+            color: transparent;
+            -webkit-text-stroke: 3px var(--primary);
+            position: relative;
+            letter-spacing: -5px;
+            text-shadow: 0 0 20px rgba(192, 58, 43, 0.2);
+        }
+
+        /* Efecto de llenado simulando nivel de crudo/aceite */
+        .error-number::before {
+            content: '404';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            color: var(--primary);
+            -webkit-text-stroke: 0px;
+            overflow: hidden;
+            animation: fillUp 4s ease-in-out infinite alternate;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        h1 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* === BOTÓN INDUSTRIAL === */
+        .btn-industrial {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 4px; /* Más cuadrado, estilo industrial */
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(192, 58, 43, 0.3);
+        }
+
+        .btn-industrial::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .btn-industrial:hover::before {
+            left: 100%;
+        }
+
+        .btn-industrial:hover {
+            background: transparent;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* === ANIMACIONES === */
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulseLight {
+            0% { opacity: 0.5; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        @keyframes fillUp {
+            0% { height: 10%; }
+            100% { height: 85%; }
+        }
+
+        /* Ícono flotante decorativo */
+        .floating-icon {
+            position: absolute;
+            font-size: 1.5rem;
+            color: rgba(192, 58, 43, 0.3);
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .icon-1 { top: 20%; left: 15%; animation-delay: 0s; }
+        .icon-2 { top: 30%; right: 15%; font-size: 2rem; animation-delay: 1s; }
+        .icon-3 { bottom: 20%; left: 25%; font-size: 2.5rem; animation-delay: 2s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .btn-industrial { width: 100%; justify-content: center; }
+            .floating-icon { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fondos dinámicos -->
+    <div class="warning-light"></div>
+    <div class="warning-light-2"></div>
+    <div class="engineering-grid"></div>
+
+    <!-- Iconos decorativos petroleros -->
+    <i class="fa-solid fa-gear floating-icon icon-1"></i>
+    <i class="fa-solid fa-oil-well floating-icon icon-2"></i>
+    <i class="fa-solid fa-wrench floating-icon icon-3"></i>
+
+    <!-- Contenido -->
+    <main class="content-404">
+        <!-- Reemplaza con tu logo -->
+        <img src="Static/Images/Logo blanco.png" alt="S&J Full Services S.A.S" class="logo" onerror="this.style.display='none'">
+        
+        <!-- El 404 animado -->
+        <div class="error-number">404</div>
+        
+        <!-- Copy ingenioso corporativo -->
+        <h1>¡Perforamos en la coordenada equivocada!</h1>
+        <p>
+            Al parecer, la página que buscas no existe o ha sido reubicada durante nuestras operaciones. Detengamos la maquinaria y regresemos a una ruta segura.
+        </p>
+
+        <!-- Botón -->
+        <a href="index.html" class="btn-industrial">
+            <i class="fa-solid fa-power-off"></i> Regresar a la Base
+        </a>
+    </main>
+
+</body>
+</html>
