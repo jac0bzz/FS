@@ -79,15 +79,15 @@ Translated with DeepL.com (free version)
             </p>
         `,
         images: [
-            { src: "Static/Images/Trailers/1.png", link: "Templates/Servicios/Trailers1.html" },
-            { src: "Static/Images/Trailers/2.png", link: "Templates/Servicios/Trailers2.html" },
-            { src: "Static/Images/Trailers/3.png", link: "Templates/Servicios/Trailers3.html" },
-            /*{ src: "Static/Images/Trailers/7.png", link: "Templates/Servicios/Trailers4.html" },*/
-            { src: "Static/Images/Trailers/5.png", link: "Templates/Servicios/Trailers5.html" },
-            { src: "Static/Images/Trailers/6.png", link: "Templates/Servicios/Trailers6.html" },
-            { src: "Static/Images/Trailers/4.png", link: "Templates/Servicios/Trailers7.html" },
-            { src: "Static/Images/Trailers/8.png", link: "Templates/Servicios/Trailers8.html" },
-            { src: "Static/Images/Trailers/9.png", link: "Templates/Servicios/Trailers9.html" },
+            { src: "Static/Images/Trailers/1.png", link: "Translate/Servicios/enServicio1.html" },
+            { src: "Static/Images/Trailers/2.png", link: "Translate/Servicios/enServicio2.html" },
+            { src: "Static/Images/Trailers/3.png", link: "Translate/Servicios/enServicio3.html" },
+            /*{ src: "Static/Images/Trailers/7.png", link: "Translate/Servicios/enServicio4.html" },*/
+            { src: "Static/Images/Trailers/5.png", link: "Translate/Servicios/enServicio5.html" },
+            { src: "Static/Images/Trailers/6.png", link: "Translate/Servicios/enServicio6.html" },
+            { src: "Static/Images/Trailers/4.png", link: "Translate/Servicios/enServicio7.html" },
+            { src: "Static/Images/Trailers/8.png", link: "Translate/Servicios/enServicio8.html" },
+            { src: "Static/Images/Trailers/9.png", link: "Translate/Servicios/enServicio9.html" },
         ]
     }
 };

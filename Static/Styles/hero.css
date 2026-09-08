@@ -1,273 +1,350 @@
+/* ==========================================================================
+   HERO DEFINITIVO - PULIDO DIAMANTE (FLUIDEZ ABSOLUTA Y FIX HEADER)
+   ========================================================================== */
 
-.hero {
+/* 1. CONTENEDOR PRINCIPAL */
+.pro-hero {
     position: relative;
-    min-height: 100vh;
-    min-height: 100dvh; 
+    width: 100%;
+    height: 100vh; 
+    min-height: 680px;
+    background-color: #050608;
+    overflow: hidden;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-    
-    padding-top: max(95px, 13vh); 
-    padding-bottom: 5rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+}
+
+/* === FONDO ROJO === */
+.pro-red-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: 
+        radial-gradient(circle at 50% 50%, transparent 40%, rgba(0,0,0,0.7) 100%),
+        repeating-linear-gradient(45deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 2px, transparent 2px, transparent 8px),
+        radial-gradient(circle at 75% 45%, #ff1a1a 0%, #c80000 45%, #5a0000 100%);
+}
+
+/* === TEXTO HUECO DE FONDO === */
+.pro-watermark {
+    position: absolute;
+    top: 45%; 
+    left: -2%;
+    transform: translateY(-50%);
+    font-family: 'Impact', sans-serif;
+    font-size: clamp(8rem, 16vw, 16rem);
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.05);
+    z-index: 1;
+    pointer-events: none;
+    white-space: nowrap;
+    letter-spacing: 5px;
+}
+
+/* === TARJETA OSCURA === */
+.pro-dark-card-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    filter: drop-shadow(25px 0 35px rgba(0,0,0,0.85)); 
+    pointer-events: none;
+}
+
+.pro-dark-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, #151821 0%, #050608 80%);
+    clip-path: ellipse(75% 125% at -10% 50%);
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
     box-sizing: border-box;
+    overflow: hidden;
+    pointer-events: auto; 
 }
 
-.bg1 {
-    background-image: url('../../Static/Images/FULL-IMG3-CARRUSEL.webp');
-}
-
-.bg2 {
-    background-image: url('../../Static/Images/FULL-IMG2-CARRUSEL.webp');
-}
-
-.bg3 {
-    background-image: url('../../Static/Images/FULL-IMG4-CARRUSEL.webp');
-}
-
-.hero-background-wrapper {
+.dark-grid-texture {
     position: absolute;
     inset: 0;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* === TEXTOS === */
+.pro-card-content {
+    max-width: 580px;
+    position: relative;
+    z-index: 5;
+}
+
+.pro-logo {
+    width: clamp(120px, 12vw, 150px);
+    height: auto;
+    margin-bottom: 0.3rem; 
+}
+
+.pro-title-wrapper { 
+    margin-bottom: 1.2rem; 
+    position: relative;
+}
+
+.ui-accent-line {
+    width: 50px;
+    height: 4px;
+    background-color: #ff3333;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+}
+
+.pro-tagline {
+    display: block;
+    font-family: system-ui, sans-serif;
+    font-size: clamp(0.75rem, 1vw, 0.95rem);
+    font-weight: 800;
+    color: #ff3333;
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.pro-headline {
+    font-family: 'Impact', sans-serif;
+    font-size: clamp(3.5rem, 5.5vw, 6.5rem);
+    line-height: 0.88;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    text-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.pro-description {
+    font-family: system-ui, sans-serif;
+    font-size: clamp(0.9rem, 1vw, 1.05rem);
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 2.2rem; 
+    font-weight: 300;
+    border-left: 2px solid rgba(255, 255, 255, 0.15);
+    padding-left: 15px;
+}
+
+.pro-btn {
+    display: inline-block;
+    background-color: #c80000;
+    color: #ffffff;
+    padding: 1rem 2.5rem;
+    font-family: system-ui, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    box-shadow: 0 10px 20px rgba(200,0,0,0.4);
+    transition: all 0.3s ease;
+}
+
+.pro-btn:hover {
+    background-color: #ffffff;
+    color: #08090b;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(255,255,255,0.2);
+}
+
+/* === CAMIÓN INTEGRADO === */
+.pro-truck-wrapper {
+    position: absolute;
+    right: 2%;
+    bottom: 12%; /* 🔥 SUBIDO UN POCO EN PANTALLAS GRANDES 🔥 */
+    width: 55%;
+    max-width: 950px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.pro-truck-glow {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+    filter: blur(40px);
     z-index: 1;
 }
 
-.hero-background {
+.pro-ground-shadow {
     position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
-    z-index: 1;
-}
-
-.hero-background.active {
-    opacity: 1;
+    bottom: 10%; 
+    left: 8%;
+    width: 85%;
+    height: 40px;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 45%, transparent 80%);
+    border-radius: 50%;
+    filter: blur(8px);
+    transform: scaleY(0.35);
     z-index: 2;
 }
 
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(192, 58, 43, 0.35), rgba(71, 7, 0, 0.9));
+.pro-truck-img {
+    position: relative;
     z-index: 3;
-}
-
-/* === CONTENIDO DEL HERO === */
-.hero-content {
-    position: relative;
-    z-index: 4;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* === LOGO === */
-.hero-logo {
-    /* Escalado responsivo sin dar saltos bruscos entre pantallas */
-    width: clamp(160px, 24vw, 300px);
     height: auto;
-    margin-bottom: 1.2rem; 
-    filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.5));
-    animation: fadeInUp 1.2s ease;
+    filter: drop-shadow(-8px 10px 10px rgba(0,0,0,0.6)); 
+    transform-origin: bottom center;
 }
 
-/* === TÍTULO Y EFECTO TYPING === */
-.hero-title {
-    font-size: clamp(2rem, 6.5vw, 5.8rem);
-    font-weight: 900;
-    letter-spacing: -1.5px;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
-    width: 100%;
-    word-break: break-word;
-}
-
-.typing {
-    display: inline-block;
-    white-space: nowrap;
-    letter-spacing: 1px;
-}
-
-.cursor {
-    display: inline-block;
-    width: 3px;
-    height: 1.2em;
-    background: #fff;
-    margin-left: 3px;
-    animation: blink 0.8s infinite;
-    vertical-align: middle;
-}
-
-/* === SUBTÍTULO 2: INGENIERÍA AVANZADA === */
-.hero-subtitle2 {
-    font-size: clamp(0.95rem, 2.5vw, 1.6rem); 
-    color: #ffffffcc;
-    letter-spacing: clamp(1px, 0.5vw, 4px);
-    margin-bottom: 1rem;
-    animation: fadeInUp 1.4s ease;
-}
-
-/* === SUBTÍTULO PRINCIPAL === */
-.hero-subtitle {
-    max-width: 650px;
-    width: 100%;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 300;
-    font-size: clamp(0.9rem, 1.8vw, 1.15rem);
-    margin-bottom: 2.2rem;
-    line-height: 1.6;
-    animation: fadeInUp 1.6s ease;
-}
-
-/* === BOTONES === */
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    animation: fadeInUp 1.8s ease;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.875rem 2rem;
-    font-weight: 600;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-}
-
-.btn.pro {
-    padding: 0.9rem 2.2rem;
-    font-size: 1rem;
-    border-radius: 50px;
-    letter-spacing: 0.5px;
-}
-
-.btn.pro:hover {
-    transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.btn-primary {
-    background-color: var(--color-background);
-    color: var(--color-primary);
-}
-
-.btn-primary:hover {
-    background-color: var(--color-primary-dark);
-    color: var(--color-background);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-}
-
-.btn-secondary:hover {
-    background-color: #ffffff;
-    color: var(--color-primary);
-}
-
-/* === SCROLL INDICATOR === */
-.scroll-indicator {
+/* DEGRADADO INFERIOR */
+.hero-bottom-fade {
     position: absolute;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-}
-
-.scroll-arrow {
-    width: 26px;
-    height: 44px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    position: relative;
-}
-
-.scroll-arrow::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 5px;
-    height: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    animation: scroll 2s infinite;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh; 
+    min-height: 120px;
+    background: linear-gradient(to top, #050608 0%, rgba(5, 6, 8, 0.8) 30%, transparent 100%);
+    z-index: 10; 
+    pointer-events: none;
 }
 
 /* =========================================================
-   BREAKPOINTS Y REGLAS DE ADAPTABILIDAD MÓVIL/TABLET
+   ANIMACIONES 
+========================================================= */
+.animate-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.25s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.55s; }
+
+.animate-slide-in {
+    opacity: 0;
+    transform: translateX(60px);
+    animation: slideInRight 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes slideInRight { to { opacity: 1; transform: translateX(0); } }
+
+/* =========================================================
+   RESPONSIVO EXTREMO (AJUSTADO AL NUEVO HEADER)
 ========================================================= */
 
-/* Dispositivos en modo horizontal / Pantallas de baja altura */
-@media (max-height: 680px) {
-    .hero {
-        min-height: auto;
-        padding-top: 100px;
-        padding-bottom: 3.5rem;
+@media (min-width: 1600px) {
+    .pro-dark-card { clip-path: ellipse(60% 125% at -5% 50%); padding-left: 10%; }
+    .pro-truck-wrapper { right: 8%; width: 50%; bottom: 14%; } /* 🔥 MÁS ARRIBA EN PANTALLAS EXTRA GRANDES 🔥 */
+}
+
+@media (max-width: 1200px) {
+    .pro-dark-card { clip-path: ellipse(80% 120% at -5% 50%); }
+    .pro-truck-wrapper { width: 58%; right: -2%; bottom: 10%; }
+}
+
+/* 🔥 TABLETS Y PANTALLAS APILADAS 🔥 */
+@media (max-width: 992px) {
+    .pro-hero { 
+        height: auto; 
+        min-height: 100vh; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: flex-start;
+        padding-top: 100px; 
+        padding-bottom: 2rem; 
     }
     
-    .scroll-indicator {
-        display: none; /* Se oculta para no solapar los botones en pantallas poco altas */
+    .pro-watermark { display: none; }
+
+    .pro-dark-card-wrapper { 
+        position: relative; 
+        width: 100%; 
+        height: auto; 
+        filter: none; 
+    }
+
+    .pro-dark-card { 
+        clip-path: ellipse(160% 100% at 50% -5%); 
+        padding: 30px 20px 60px 20px; 
+        background: linear-gradient(180deg, #050608 0%, #151821 100%);
+        justify-content: center;
+    }
+
+    .pro-card-content { 
+        max-width: 650px; 
+        text-align: center; 
+        margin: 0 auto; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .pro-logo { width: 120px; margin-bottom: 0.5rem; }
+    .ui-accent-line { margin: 0 auto 1.2rem auto; } 
+    .pro-description { border-left: none; padding-left: 0; margin-bottom: 2rem; }
+
+    .pro-truck-wrapper { 
+        position: relative; 
+        right: 0; 
+        bottom: 0; 
+        width: 85%; 
+        max-width: 650px;
+        margin: 15px auto 0 auto; /* 🔥 BAJADO UN POCO EN TABLET/MÓVIL 🔥 */
+        padding: 0;
+        z-index: 3;
+    }
+
+    .pro-ground-shadow { bottom: 6%; }
+    .hero-bottom-fade { height: 10vh; min-height: 80px; }
+}
+
+/* 🔥 TELÉFONOS MÓVILES 🔥 */
+@media (max-width: 768px) {
+    .pro-hero { padding-top: 90px; }
+    
+    .pro-dark-card { 
+        padding: 20px 15px 50px 15px; 
+        clip-path: ellipse(180% 100% at 50% 0%);
+    }
+
+    .pro-logo { width: 100px; }
+    .pro-headline { font-size: clamp(2.8rem, 11vw, 4rem); }
+    .pro-description { font-size: 0.9rem; margin-bottom: 1.8rem; }
+
+    .pro-truck-wrapper { 
+        width: 98%; 
+        margin: 25px auto 0 auto; /* 🔥 BAJADO UN POCO EN CELULARES 🔥 */
     }
 }
 
-/* Tablets / Pantallas intermedias (hasta 992px) */
-@media (max-width: 992px) {
-    .hero-background {
-        background-attachment: scroll; /* Desactiva parallax estático que causa fallos gráficos en Safari iOS/Android */
-    }
+/* TELÉFONOS HORIZONTALES */
+@media (max-height: 600px) and (orientation: landscape) {
+    .pro-hero { height: auto; min-height: 100vh; padding-top: 70px; padding-bottom: 50px; }
+    .pro-dark-card { clip-path: ellipse(180% 95% at 50% 0%); padding-bottom: 60px; }
+    .pro-truck-wrapper { width: 50%; max-width: 400px; margin: 10px auto 0 auto; }
 }
 
-/* Móviles estándar (hasta 576px) */
-@media (max-width: 576px) {
-    .hero {
-        padding-top: max(85px, 14vh);
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-    }
-
-    .btn.pro {
-        width: 100%;
-        max-width: 320px;
-        text-align: center;
-    }
-}
-
-/* Móviles pequeños / Plegables (hasta 380px) */
+/* CELULARES MINIATURA */
 @media (max-width: 380px) {
-    .hero {
-        padding-top: 80px;
-    }
-
-    .typing {
-        white-space: normal;
-    }
-
-    .btn.pro {
-        padding: 0.75rem 1.2rem;
-        font-size: 0.9rem;
-    }
+    .pro-logo { width: 90px; }
+    .pro-headline { font-size: 2.5rem; } 
+    .pro-tagline { font-size: 0.65rem; }
+    .pro-description { font-size: 0.85rem; padding: 0 5px; }
+    .pro-btn { width: 100%; max-width: 280px; padding: 0.8rem 1rem; font-size: 0.75rem; text-align: center; }
+    .pro-dark-card { padding-bottom: 50px; }
+    .pro-truck-wrapper { margin-top: 20px; }
 }
