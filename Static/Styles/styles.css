@@ -347,25 +347,27 @@ section {
     transform: scale(1.05);
 }
 
-/* =========================================
-   PRELOADER PANTALLA DE CARGA
-========================================= */
+/* ==========================================================================
+   PRELOADER INDUSTRIAL - SIMULADOR DE POZO & MANÓMETRO
+   ========================================================================== */
 .preloader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #0b0f19; /* Negro/Azul noche industrial */
-    z-index: 999999; /* Por encima de absolutamente todo */
+    background-color: #060709; /* Negro acero profundo */
+    background-image: 
+        radial-gradient(circle at 50% 40%, rgba(200, 0, 0, 0.12) 0%, transparent 60%),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.015) 0px, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 4px);
+    z-index: 999999;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), 
-                visibility 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: opacity 0.7s cubic-bezier(0.77, 0, 0.175, 1), 
+                visibility 0.7s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-/* Transición para desaparecer cuando finalice la carga */
 .preloader.preloader-hidden {
     opacity: 0;
     visibility: hidden;
@@ -376,110 +378,180 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
-/* Círculos Giratorios Neón/Rojo */
-.logo-loader-wrapper {
+/* === MÓDULO CENTRAL DE POZO === */
+.oil-rig-system {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.tech-ring {
+/* Anillo Manómetro Industrial */
+.pressure-gauge-ring {
     position: absolute;
     inset: 0;
-    border: 2px solid transparent;
-    border-top-color: #ff2a2a; /* Rojo corporativo */
-    border-right-color: rgba(255, 42, 42, 0.3);
     border-radius: 50%;
-    animation: spinRing 1.5s linear infinite;
-    box-shadow: 0 0 15px rgba(255, 42, 42, 0.4);
+    border: 2px dashed rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    animation: gaugeRotate 25s linear infinite;
 }
 
-.tech-ring-inner {
+/* Pistón Hidráulico de Presión */
+.hydraulic-piston-ring {
     position: absolute;
-    inset: 10px;
-    border: 2px stroke transparent;
-    border-bottom: 2px solid #ffffff;
-    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    inset: 8px;
+    border: 3px solid transparent;
+    border-top: 3px solid #c80000;
+    border-left: 3px solid #c80000;
     border-radius: 50%;
-    animation: spinRingReverse 2s linear infinite;
+    animation: hydraulicStroke 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    filter: drop-shadow(0 0 8px rgba(200, 0, 0, 0.6));
 }
 
-/* Caja de Logo Central */
+/* Caja de Logo de Torres */
 .loader-logo-box {
-    width: 90px;
-    height: 90px;
+    width: 95px;
+    height: 95px;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    z-index: 3;
+    background: radial-gradient(circle at 30% 30%, #1a1d24 0%, #08090b 80%);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 
+        inset 0 4px 10px rgba(0, 0, 0, 0.9),
+        0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 .loader-logo {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 55%;
+    max-height: 55%;
     object-fit: contain;
-    animation: logoPulse 2s ease-in-out infinite alternate;
+    animation: rigStroke 2s ease-in-out infinite alternate;
 }
 
-/* Textos y Barra de Progreso */
+/* Válvula de Salida Pulsante */
+.valve-pulse {
+    position: absolute;
+    bottom: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: #c80000;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #c80000;
+    animation: valveBlink 1s ease-in-out infinite alternate;
+}
+
+/* === BARRA Y INDICADORES === */
 .loader-text-group {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 12px;
+}
+
+.rig-status-badge {
+    display: flex;
+    align-items: center;
     gap: 8px;
+    background: rgba(200, 0, 0, 0.08);
+    border: 1px solid rgba(200, 0, 0, 0.25);
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+.rig-status-badge i {
+    color: #c80000;
+    font-size: 0.85rem;
 }
 
 .loader-status {
-    font-family: var(--font-heading, monospace);
+    font-family: system-ui, -apple-system, sans-serif;
     color: #a0aab5;
-    font-size: 0.75rem;
-    letter-spacing: 2.5px;
-    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    font-weight: 800;
     text-transform: uppercase;
 }
 
+/* Contenedor Riel Metálico */
 .progress-bar-container {
-    width: 200px;
-    height: 4px;
-    background: rgba(255, 255, 255, 0.1);
+    width: 240px;
+    height: 8px;
+    background: #0a0c10;
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 4px;
     overflow: hidden;
     position: relative;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.9);
 }
 
+/* Llenado de Presión en la Barra */
 .progress-bar-fill {
     width: 0%;
     height: 100%;
-    background: linear-gradient(90deg, #950000 0%, #ff2a2a 100%);
-    box-shadow: 0 0 10px #ff2a2a;
+    background: linear-gradient(90deg, #500000 0%, #c80000 70%, #ff3333 100%);
+    box-shadow: 0 0 12px rgba(200, 0, 0, 0.8);
     transition: width 0.1s linear;
+    position: relative;
+    z-index: 2;
 }
 
-.loader-percent {
-    font-family: var(--font-heading, sans-serif);
+.loader-metrics {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 240px;
+    margin-top: 2px;
+}
+
+.psi-reading {
+    font-family: 'Impact', sans-serif;
     color: #ffffff;
-    font-size: 0.9rem;
-    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-/* Keyframe Animations */
-@keyframes spinRing {
+.psi-reading i {
+    font-size: 0.85rem;
+    color: #c80000;
+}
+
+.rig-info {
+    font-family: system-ui, monospace;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* === ANIMACIONES MECÁNICAS === */
+@keyframes gaugeRotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-@keyframes spinRingReverse {
-    0% { transform: rotate(360deg); }
-    100% { transform: rotate(0deg); }
+@keyframes hydraulicStroke {
+    0% { transform: rotate(0deg) scale(0.98); }
+    50% { transform: rotate(180deg) scale(1.03); }
+    100% { transform: rotate(360deg) scale(0.98); }
 }
 
-@keyframes logoPulse {
-    0% { transform: scale(0.92); filter: drop-shadow(0 0 2px rgba(255, 42, 42, 0.2)); }
-    100% { transform: scale(1.02); filter: drop-shadow(0 0 12px rgba(255, 42, 42, 0.6)); }
+@keyframes rigStroke {
+    0% { transform: translateY(3px) scale(0.95); }
+    100% { transform: translateY(-3px) scale(1.02); }
+}
+
+@keyframes valveBlink {
+    0% { opacity: 0.3; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1.2); }
 }

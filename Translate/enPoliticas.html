@@ -31,22 +31,44 @@
     <!-- PRELOADER -->
     <div id="site-preloader" class="preloader">
         <div class="preloader-content">
-            <div class="logo-loader-wrapper">
-                <div class="tech-ring"></div>
-                <div class="tech-ring-inner"></div>
+            
+            <!-- MÓDULO MECÁNICO CENTRAL -->
+            <div class="oil-rig-system">
+                <!-- Anillo Manómetro con Marcas de Graduación -->
+                <div class="pressure-gauge-ring"></div>
                 
+                <!-- Pistón Hidráulico de Bombeo (Efecto de Golpe de Presión) -->
+                <div class="hydraulic-piston-ring"></div>
+
+                <!-- Caja Central con Fondo de Crudo Metálico -->
                 <div class="loader-logo-box">
                     <img src="../Static/Images/Logo blanco.png" alt="Full Services" class="loader-logo">
                 </div>
+                
+                <!-- Indicador de Válvula de Salida -->
+                <div class="valve-pulse"></div>
             </div>
 
+            <!-- INDICADORES TÉCNICOS Y BARRA DE PRESIÓN -->
             <div class="loader-text-group">
-                <span class="loader-status">INITIALIZING SYSTEMS</span>
+                <div class="rig-status-badge">
+                    <i class="fa-solid fa-oil-well"></i>
+                    <span class="loader-status">PUMPING SYSTEM / ACTIVE WELL</span>
+                </div>
+                
+                <!-- Riel Metálico de Carga -->
                 <div class="progress-bar-container">
+                    <div class="progress-bar-glow"></div>
                     <div id="loader-progress-bar" class="progress-bar-fill"></div>
                 </div>
-                <span id="loader-percentage" class="loader-percent">0%</span>
+                
+                <!-- Métricas Industriales en Tiempo Real -->
+                <div class="loader-metrics">
+                    <span class="psi-reading"><i class="fa-solid fa-gauge-high"></i> <span id="loader-percentage">0%</span></span>
+                    <span class="rig-info">PRESSURE: 3,500 PSI</span>
+                </div>
             </div>
+
         </div>
     </div>
 
